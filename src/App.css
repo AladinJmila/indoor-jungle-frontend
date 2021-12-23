@@ -1,0 +1,21 @@
+.App {
+  text-align: center;
+}
+
+.App h2 {
+  /* width: 90%; */
+  color: white;
+  /* margin: auto; */
+  margin: 0 20px;
+  box-sizing: border-box;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: aquamarine;
+  border-radius: 10px;
+}
+
+.App .plants {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+}

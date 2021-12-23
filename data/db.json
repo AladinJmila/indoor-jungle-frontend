@@ -1,0 +1,96 @@
+{
+  "plants": [
+    {
+      "id": "1",
+      "name": "CALADIUM",
+      "native": "Central and South America",
+      "soil": "rich well drianing soil",
+      "soilPH": {
+        "description": "slightly acidic",
+        "value": "6.0-6.5"
+      },
+      "pottingMix": [
+        "1x peat moss",
+        "2x perlite",
+        "1x orchid bark",
+        "6x coir compost"
+      ],
+      "watering": "7",
+      "light": "bright indirect light",
+      "img": "/img/caladium.jpg"
+    },
+    {
+      "id": "2",
+      "name": "MONSTERA ADANSONII",
+      "native": "Central and South America",
+      "soil": "well drianing soil",
+      "soilPH": {
+        "description": "acidic - neutral",
+        "value": "5.5-7.0"
+      },
+      "pottingMix": [
+        "1x potting soil",
+        "1x coco fiber / orchid bark",
+        "handful of coco chips & compost"
+      ],
+      "watering": "5",
+      "light": "bright indirect light",
+      "img": "/img/monstera-adansonii.jpg"
+    },
+    {
+      "id": "3",
+      "name": "MONSTERA DELICIOSA",
+      "native": "tropical forests of Central America",
+      "soil": "soil to hold moisture but also drains well",
+      "soilPH": {
+        "description": "slightly acidic",
+        "value": "5.5-6.5"
+      },
+      "pottingMix": [
+        "1x peat moss",
+        "1x perlite",
+        "4x pine bark fines (alternative: orchid mix bark)"
+      ],
+      "watering": "5",
+      "light": "bright to medium indirect light",
+      "img": "/img/monstera.jpg"
+    },
+    {
+      "id": "4",
+      "name": "PHILODENDRON PINK PRINCESS",
+      "native": "South America",
+      "soil": "soil to hold moisture but also drains well \rloose well draining soil that is rich in organic matter",
+      "soilPH": {
+        "description": "slightly acidic",
+        "value": "5.5-6.5"
+      },
+      "pottingMix": [
+        "4x peat moss or coco choir",
+        "3x orchid bark",
+        "2x perlite",
+        "1x worm castings"
+      ],
+      "watering": "10",
+      "light": "bright indirect light",
+      "img": "/img/pink-princess.jpg"
+    },
+    {
+      "id": "5",
+      "name": "VARIGATED FICUS ELASTICA",
+      "native": "humid rainforests of south and southeast Asia",
+      "soil": "light moisture in rich well draining soil",
+      "soilPH": {
+        "description": "acidic - neutral",
+        "value": "5.5-7.0"
+      },
+      "pottingMix": [
+        "1x potting soil or peat moss",
+        "1x perlite or coarse sand",
+        "1x bark "
+      ],
+      "watering": "9",
+      "light": "bright indirect light",
+      "img": "/img/varigated-ficus-elastica.jpg"
+    }
+  ]
+}
