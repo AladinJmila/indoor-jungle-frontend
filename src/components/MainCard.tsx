@@ -25,19 +25,38 @@ const apiEndPoint = 'http://localhost:3000/plants';
 const MainCard: React.FC<IProps> = ({ plant }) => {
   const [showDetails, setShowDetails] = useState(false);
   const [daysNum, setDaysNum] = useState(plant.watering.interval);
+  const [update, setUpdate] = useState(false);
 
   const mainDiv = useRef<HTMLImageElement>(null);
   const detailsDiv = useRef<HTMLDivElement>(null);
 
   const handleClick = async () => {
-    if (showDetails) {
-      // save in db
+    if (showDetails && daysNum !== plant.watering.interval) {
+      const body = {
+        ...plant,
+        watering: {
+          ...plant.watering,
+          interval: daysNum,
+          daysToWater: await daysToWaterCounter(),
+        },
+      };
+      await axios.put(`${apiEndPoint}/${plant.id}`, body);
+      // const updatedPlant = await axios.get(`${apiEndPoint}/${plant.id}`);
     }
     setShowDetails(!showDetails);
   };
 
-  const handleWatering = () => {
+  const handleWatering = async () => {
     setDaysNum(plant.watering.interval);
+    const body = {
+      ...plant,
+      watering: {
+        ...plant.watering,
+        daysToWater: plant.watering.interval,
+        lastWatered: new Date().toISOString(),
+      },
+    };
+    await axios.put(`${apiEndPoint}/${plant.id}`, body);
   };
 
   useEffect(() => {
@@ -58,16 +77,16 @@ const MainCard: React.FC<IProps> = ({ plant }) => {
     setDaysNum(e.target.valueAsNumber);
   };
 
-  // useEffect(() => {
-  //   const savePlant = async () => {
-  //     const body = { watering: { ...plant.watering, interval: daysNum } };
-  //     await axios.put(`${apiEndPoint}/${plant.id}`, body);
-  //     // const updatedPlant = await axios.get(`${apiEndPoint}/${plant.id}`);
-  //     // console.log(updatedPlant);
-  //   };
+  const daysToWaterCounter = () => {
+    const { lastWatered, interval } = plant.watering;
+    let newCount =
+      (new Date().getTime() - new Date(lastWatered).getTime()) /
+      (1000 * 3600 * 24);
 
-  //   savePlant();
-  // }, []);
+    newCount = Math.floor(newCount);
+
+    return interval - newCount;
+  };
 
   return (
     <div
@@ -83,9 +102,11 @@ const MainCard: React.FC<IProps> = ({ plant }) => {
         <button
           id='btn2'
           onClick={handleWatering}
-          style={{ backgroundColor: daysNum === 0 ? 'red' : '' }}
+          style={{
+            backgroundColor: plant.watering.daysToWater <= 0 ? 'red' : '',
+          }}
         >
-          <b>{!daysNum ? 0 : daysNum}</b>
+          <b>{plant.watering.daysToWater}</b>
         </button>
       </div>
       {showDetails && (
