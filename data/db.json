@@ -16,9 +16,9 @@
         "6x coir compost"
       ],
       "watering": {
-        "interval": "7",
+        "interval": "10",
         "lastWatered": "2021-12-20T12:00:0.000Z",
-        "daysToWater": "1"
+        "daysToWater": "4"
       },
       "light": "bright indirect light",
       "img": "/img/caladium.jpg"
@@ -38,7 +38,7 @@
         "handful of coco chips & compost"
       ],
       "watering": {
-        "interval": "5",
+        "interval": "10",
         "lastWatered": "2021-12-20T12:00:0.000Z",
         "daysToWater": "4"
       },
@@ -60,7 +60,7 @@
         "4x pine bark fines (alternative: orchid mix bark)"
       ],
       "watering": {
-        "interval": "5",
+        "interval": "10",
         "lastWatered": "2021-12-20T12:00:0.000Z",
         "daysToWater": "4"
       },
@@ -105,9 +105,9 @@
         "1x bark "
       ],
       "watering": {
-        "interval": "9",
+        "interval": "10",
         "lastWatered": "2021-12-20T12:00:0.000Z",
-        "daysToWater": "3"
+        "daysToWater": "4"
       },
       "light": "bright indirect light",
       "img": "/img/varigated-ficus-elastica.jpg"

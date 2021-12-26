@@ -20,6 +20,8 @@ interface IProps {
   };
 }
 
+const apiEndPoint = 'http://localhost:3000/plants';
+
 const MainCard: React.FC<IProps> = ({ plant }) => {
   const [showDetails, setShowDetails] = useState(false);
   const [daysNum, setDaysNum] = useState(plant.watering.interval);
@@ -55,6 +57,17 @@ const MainCard: React.FC<IProps> = ({ plant }) => {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setDaysNum(e.target.valueAsNumber);
   };
+
+  // useEffect(() => {
+  //   const savePlant = async () => {
+  //     const body = { watering: { ...plant.watering, interval: daysNum } };
+  //     await axios.put(`${apiEndPoint}/${plant.id}`, body);
+  //     // const updatedPlant = await axios.get(`${apiEndPoint}/${plant.id}`);
+  //     // console.log(updatedPlant);
+  //   };
+
+  //   savePlant();
+  // }, []);
 
   return (
     <div
