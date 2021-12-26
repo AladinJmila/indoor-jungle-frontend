@@ -15,7 +15,11 @@
         "1x orchid bark",
         "6x coir compost"
       ],
-      "watering": "7",
+      "watering": {
+        "interval": "7",
+        "lastWatered": "2021-12-20T12:00:0.000Z",
+        "daysToWater": "1"
+      },
       "light": "bright indirect light",
       "img": "/img/caladium.jpg"
     },
@@ -33,7 +37,11 @@
         "1x coco fiber / orchid bark",
         "handful of coco chips & compost"
       ],
-      "watering": "5",
+      "watering": {
+        "interval": "5",
+        "lastWatered": "2021-12-20T12:00:0.000Z",
+        "daysToWater": "4"
+      },
       "light": "bright indirect light",
       "img": "/img/monstera-adansonii.jpg"
     },
@@ -51,7 +59,11 @@
         "1x perlite",
         "4x pine bark fines (alternative: orchid mix bark)"
       ],
-      "watering": "5",
+      "watering": {
+        "interval": "5",
+        "lastWatered": "2021-12-20T12:00:0.000Z",
+        "daysToWater": "4"
+      },
       "light": "bright to medium indirect light",
       "img": "/img/monstera.jpg"
     },
@@ -70,7 +82,11 @@
         "2x perlite",
         "1x worm castings"
       ],
-      "watering": "10",
+      "watering": {
+        "interval": "10",
+        "lastWatered": "2021-12-20T12:00:0.000Z",
+        "daysToWater": "4"
+      },
       "light": "bright indirect light",
       "img": "/img/pink-princess.jpg"
     },
@@ -88,7 +104,11 @@
         "1x perlite or coarse sand",
         "1x bark "
       ],
-      "watering": "9",
+      "watering": {
+        "interval": "9",
+        "lastWatered": "2021-12-20T12:00:0.000Z",
+        "daysToWater": "3"
+      },
       "light": "bright indirect light",
       "img": "/img/varigated-ficus-elastica.jpg"
     }

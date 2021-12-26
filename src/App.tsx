@@ -11,7 +11,11 @@ interface IState {
     soil: string;
     soilPH: { description: string; value: string };
     pottingMix: string[];
-    watering: number;
+    watering: {
+      interval: number;
+      lastWatered: string;
+      daysToWater: number;
+    };
     light: string;
     img: string;
   }[];

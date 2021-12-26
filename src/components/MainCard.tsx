@@ -10,7 +10,11 @@ interface IProps {
     soil: string;
     soilPH: { description: string; value: string };
     pottingMix: string[];
-    watering: number;
+    watering: {
+      interval: number;
+      lastWatered: string;
+      daysToWater: number;
+    };
     light: string;
     img: string;
   };
@@ -18,7 +22,7 @@ interface IProps {
 
 const MainCard: React.FC<IProps> = ({ plant }) => {
   const [showDetails, setShowDetails] = useState(false);
-  const [daysNum, setDaysNum] = useState(plant.watering);
+  const [daysNum, setDaysNum] = useState(plant.watering.interval);
 
   const mainDiv = useRef<HTMLImageElement>(null);
   const detailsDiv = useRef<HTMLDivElement>(null);
@@ -31,7 +35,7 @@ const MainCard: React.FC<IProps> = ({ plant }) => {
   };
 
   const handleWatering = () => {
-    setDaysNum(plant.watering);
+    setDaysNum(plant.watering.interval);
   };
 
   useEffect(() => {
