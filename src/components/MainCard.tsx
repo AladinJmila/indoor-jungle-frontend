@@ -25,7 +25,7 @@ const apiEndPoint = 'http://localhost:3000/plants';
 const MainCard: React.FC<IProps> = ({ plant }) => {
   const [showDetails, setShowDetails] = useState(false);
   const [daysNum, setDaysNum] = useState(plant.watering.interval);
-  const [update, setUpdate] = useState(false);
+  // const [update, setUpdate] = useState(false);
 
   const mainDiv = useRef<HTMLImageElement>(null);
   const detailsDiv = useRef<HTMLDivElement>(null);
@@ -94,7 +94,7 @@ const MainCard: React.FC<IProps> = ({ plant }) => {
       className='main-card'
       style={{ flex: showDetails ? '1 0 70%' : '1 0 34%' }}
     >
-      <img src={plant.img} alt='plant image' />
+      <img src={plant.img} alt='plant' />
       <div className='buttons'>
         <button id='btn1' onClick={handleClick}>
           <b>...</b>
