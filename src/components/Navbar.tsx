@@ -5,10 +5,10 @@ const Navbar = () => {
   return (
     <div className='navbar bg-primary'>
       <ul>
-        <li className='navbar-brand text-pink-light-5'>
+        <li className='navbar-brand text-white'>
           <Link to='/'>
             <img src={logo} alt='jungle' />
-            <h3 className='navbar-text bg-black'>Indoor Jungle</h3>
+            <h4 className='navbar-text bg-black'>Indoor Jungle</h4>
           </Link>
         </li>
         <li className='text-white'>
@@ -18,7 +18,9 @@ const Navbar = () => {
           <Link to='/signup'>Signup</Link>
         </li>
         <li>
-          <button className='btn mr-2'>Logout</button>
+          <button className='btn-outlined-secondary bg-hover-secondary text-hover-white mr-2 '>
+            Logout
+          </button>
         </li>
       </ul>
     </div>

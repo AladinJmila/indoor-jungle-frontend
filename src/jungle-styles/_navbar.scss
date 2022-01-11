@@ -1,11 +1,12 @@
+@use 'sass:math';
+
 .navbar {
   width: 100%;
   box-shadow: $base-box-shadow;
-  padding: $base-padding 0;
+  padding: math.div($base-padding, 1.2) 0;
   box-sizing: border-box;
 
   .navbar-brand {
-    font-weight: bold;
     letter-spacing: 1px;
     display: flex;
     align-items: center;
@@ -13,7 +14,7 @@
 
     img {
       position: fixed;
-      height: 58px;
+      height: 54px;
       width: 180px;
       top: 0;
       left: 0;
@@ -21,8 +22,8 @@
     }
     .navbar-text {
       display: block;
-      margin: -$base-padding;
-      padding: 10px 14px 12px 32px;
+      margin: -$base-padding 0;
+      padding: 8px 22px 18px 30px;
     }
   }
 
@@ -37,7 +38,9 @@
     }
 
     button {
-      padding: 8px 12px;
+      font: inherit;
+      padding: 4px 10px;
+      border-width: $base-border-width * 2;
     }
   }
 }

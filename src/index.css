@@ -3248,6 +3248,7 @@ img {
   padding: 0.75em 1.5em;
   border-radius: 10px;
   background-color: #e2e2e2;
+  box-sizing: border-box;
 }
 
 .btn-primary {
@@ -3259,6 +3260,7 @@ img {
   padding: 0.75em 1.5em;
   border-radius: 10px;
   background-color: #4e7261;
+  box-sizing: border-box;
 }
 .btn-primary:hover {
   background-color: #58816e;
@@ -3273,6 +3275,7 @@ img {
   padding: 0.75em 1.5em;
   border-radius: 10px;
   background-color: #fff;
+  box-sizing: border-box;
   border: 1px solid #4e7261;
 }
 .btn-outlined-primary:hover {
@@ -3288,6 +3291,7 @@ img {
   padding: 0.75em 1.5em;
   border-radius: 10px;
   background-color: #4e7261;
+  box-sizing: border-box;
   color: #bc9dac;
 }
 .btn-complement-primary:hover {
@@ -3304,6 +3308,7 @@ img {
   padding: 0.75em 1.5em;
   border-radius: 10px;
   background-color: #937e81;
+  box-sizing: border-box;
 }
 .btn-secondary:hover {
   background-color: #9f8c8f;
@@ -3318,6 +3323,7 @@ img {
   padding: 0.75em 1.5em;
   border-radius: 10px;
   background-color: #fff;
+  box-sizing: border-box;
   border: 1px solid #937e81;
 }
 .btn-outlined-secondary:hover {
@@ -3333,6 +3339,7 @@ img {
   padding: 0.75em 1.5em;
   border-radius: 10px;
   background-color: #937e81;
+  box-sizing: border-box;
   color: #d1d9d8;
 }
 .btn-complement-secondary:hover {
@@ -3349,6 +3356,7 @@ img {
   padding: 0.75em 1.5em;
   border-radius: 10px;
   background-color: #e0b6bd;
+  box-sizing: border-box;
 }
 .btn-info:hover {
   background-color: #e8c8cd;
@@ -3363,6 +3371,7 @@ img {
   padding: 0.75em 1.5em;
   border-radius: 10px;
   background-color: #fff;
+  box-sizing: border-box;
   border: 1px solid #e0b6bd;
 }
 .btn-outlined-info:hover {
@@ -3378,6 +3387,7 @@ img {
   padding: 0.75em 1.5em;
   border-radius: 10px;
   background-color: #e0b6bd;
+  box-sizing: border-box;
   color: white;
 }
 .btn-complement-info:hover {
@@ -3394,6 +3404,7 @@ img {
   padding: 0.75em 1.5em;
   border-radius: 10px;
   background-color: #983051;
+  box-sizing: border-box;
 }
 .btn-error:hover {
   background-color: #ab365b;
@@ -3408,6 +3419,7 @@ img {
   padding: 0.75em 1.5em;
   border-radius: 10px;
   background-color: #fff;
+  box-sizing: border-box;
   border: 1px solid #983051;
 }
 .btn-outlined-error:hover {
@@ -3423,6 +3435,7 @@ img {
   padding: 0.75em 1.5em;
   border-radius: 10px;
   background-color: #983051;
+  box-sizing: border-box;
   color: #88d9bf;
 }
 .btn-complement-error:hover {
@@ -3439,6 +3452,7 @@ img {
   padding: 0.75em 1.5em;
   border-radius: 10px;
   background-color: #268291;
+  box-sizing: border-box;
 }
 .btn-blue:hover {
   background-color: #2b94a5;
@@ -3453,6 +3467,7 @@ img {
   padding: 0.75em 1.5em;
   border-radius: 10px;
   background-color: #fff;
+  box-sizing: border-box;
   border: 1px solid #268291;
 }
 .btn-outlined-blue:hover {
@@ -3468,6 +3483,7 @@ img {
   padding: 0.75em 1.5em;
   border-radius: 10px;
   background-color: #268291;
+  box-sizing: border-box;
   color: #db8375;
 }
 .btn-complement-blue:hover {
@@ -3484,6 +3500,7 @@ img {
   padding: 0.75em 1.5em;
   border-radius: 10px;
   background-color: #c4414c;
+  box-sizing: border-box;
 }
 .btn-red:hover {
   background-color: #ca545e;
@@ -3498,6 +3515,7 @@ img {
   padding: 0.75em 1.5em;
   border-radius: 10px;
   background-color: #fff;
+  box-sizing: border-box;
   border: 1px solid #c4414c;
 }
 .btn-outlined-red:hover {
@@ -3513,6 +3531,7 @@ img {
   padding: 0.75em 1.5em;
   border-radius: 10px;
   background-color: #c4414c;
+  box-sizing: border-box;
   color: #b6e8e4;
 }
 .btn-complement-red:hover {
@@ -3529,6 +3548,7 @@ img {
   padding: 0.75em 1.5em;
   border-radius: 10px;
   background-color: #e8e060;
+  box-sizing: border-box;
 }
 .btn-yellow:hover {
   background-color: #ebe476;
@@ -3543,6 +3563,7 @@ img {
   padding: 0.75em 1.5em;
   border-radius: 10px;
   background-color: #fff;
+  box-sizing: border-box;
   border: 1px solid #e8e060;
 }
 .btn-outlined-yellow:hover {
@@ -3558,6 +3579,7 @@ img {
   padding: 0.75em 1.5em;
   border-radius: 10px;
   background-color: #e8e060;
+  box-sizing: border-box;
   color: #e6e7fb;
 }
 .btn-complement-yellow:hover {
@@ -3574,6 +3596,7 @@ img {
   padding: 0.75em 1.5em;
   border-radius: 10px;
   background-color: #4e7a29;
+  box-sizing: border-box;
 }
 .btn-green:hover {
   background-color: #5a8d2f;
@@ -3588,6 +3611,7 @@ img {
   padding: 0.75em 1.5em;
   border-radius: 10px;
   background-color: #fff;
+  box-sizing: border-box;
   border: 1px solid #4e7a29;
 }
 .btn-outlined-green:hover {
@@ -3603,6 +3627,7 @@ img {
   padding: 0.75em 1.5em;
   border-radius: 10px;
   background-color: #4e7a29;
+  box-sizing: border-box;
   color: #a26ece;
 }
 .btn-complement-green:hover {
@@ -3619,6 +3644,7 @@ img {
   padding: 0.75em 1.5em;
   border-radius: 10px;
   background-color: #e1707d;
+  box-sizing: border-box;
 }
 .btn-pink:hover {
   background-color: #e58590;
@@ -3633,6 +3659,7 @@ img {
   padding: 0.75em 1.5em;
   border-radius: 10px;
   background-color: #fff;
+  box-sizing: border-box;
   border: 1px solid #e1707d;
 }
 .btn-outlined-pink:hover {
@@ -3648,6 +3675,7 @@ img {
   padding: 0.75em 1.5em;
   border-radius: 10px;
   background-color: #e1707d;
+  box-sizing: border-box;
   color: #eefcfa;
 }
 .btn-complement-pink:hover {
@@ -3664,6 +3692,7 @@ img {
   padding: 0.75em 1.5em;
   border-radius: 10px;
   background-color: #cea78b;
+  box-sizing: border-box;
 }
 .btn-beige:hover {
   background-color: #d6b59d;
@@ -3678,6 +3707,7 @@ img {
   padding: 0.75em 1.5em;
   border-radius: 10px;
   background-color: #fff;
+  box-sizing: border-box;
   border: 1px solid #cea78b;
 }
 .btn-outlined-beige:hover {
@@ -3693,6 +3723,7 @@ img {
   padding: 0.75em 1.5em;
   border-radius: 10px;
   background-color: #cea78b;
+  box-sizing: border-box;
   color: #f7f9fb;
 }
 .btn-complement-beige:hover {
@@ -3709,6 +3740,7 @@ img {
   padding: 0.75em 1.5em;
   border-radius: 10px;
   background-color: #644133;
+  box-sizing: border-box;
 }
 .btn-brown:hover {
   background-color: #754c3c;
@@ -3723,6 +3755,7 @@ img {
   padding: 0.75em 1.5em;
   border-radius: 10px;
   background-color: #fff;
+  box-sizing: border-box;
   border: 1px solid #644133;
 }
 .btn-outlined-brown:hover {
@@ -3738,6 +3771,7 @@ img {
   padding: 0.75em 1.5em;
   border-radius: 10px;
   background-color: #644133;
+  box-sizing: border-box;
   color: #77a6b9;
 }
 .btn-complement-brown:hover {
@@ -3754,6 +3788,7 @@ img {
   padding: 0.75em 1.5em;
   border-radius: 10px;
   background-color: #f5f4f5;
+  box-sizing: border-box;
 }
 .btn-white:hover {
   background-color: white;
@@ -3768,6 +3803,7 @@ img {
   padding: 0.75em 1.5em;
   border-radius: 10px;
   background-color: #fff;
+  box-sizing: border-box;
   border: 1px solid #f5f4f5;
 }
 .btn-outlined-white:hover {
@@ -3783,6 +3819,7 @@ img {
   padding: 0.75em 1.5em;
   border-radius: 10px;
   background-color: #f5f4f5;
+  box-sizing: border-box;
   color: white;
 }
 .btn-complement-white:hover {
@@ -3799,6 +3836,7 @@ img {
   padding: 0.75em 1.5em;
   border-radius: 10px;
   background-color: black;
+  box-sizing: border-box;
 }
 .btn-black:hover {
   background-color: #0d0d0d;
@@ -3813,6 +3851,7 @@ img {
   padding: 0.75em 1.5em;
   border-radius: 10px;
   background-color: #fff;
+  box-sizing: border-box;
   border: 1px solid black;
 }
 .btn-outlined-black:hover {
@@ -3828,6 +3867,7 @@ img {
   padding: 0.75em 1.5em;
   border-radius: 10px;
   background-color: black;
+  box-sizing: border-box;
   color: #4d4d4d;
 }
 .btn-complement-black:hover {
@@ -3839,7 +3879,7 @@ img {
   display: block;
   padding: 0.75em;
   border: 1px solid #ddd;
-  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
 }
 .card .card-title {
@@ -3856,12 +3896,11 @@ img {
 
 .navbar {
   width: 100%;
-  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
-  padding: 0.75em 0;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+  padding: 0.625em 0;
   box-sizing: border-box;
 }
 .navbar .navbar-brand {
-  font-weight: bold;
   letter-spacing: 1px;
   display: flex;
   align-items: center;
@@ -3869,7 +3908,7 @@ img {
 }
 .navbar .navbar-brand img {
   position: fixed;
-  height: 58px;
+  height: 54px;
   width: 180px;
   top: 0;
   left: 0;
@@ -3877,8 +3916,8 @@ img {
 }
 .navbar .navbar-brand .navbar-text {
   display: block;
-  margin: -0.75em;
-  padding: 10px 14px 12px 32px;
+  margin: -0.75em 0;
+  padding: 8px 22px 18px 30px;
 }
 .navbar ul {
   display: flex;
@@ -3890,7 +3929,9 @@ img {
   margin-right: 20px;
 }
 .navbar ul button {
-  padding: 8px 12px;
+  font: inherit;
+  padding: 4px 10px;
+  border-width: 2px;
 }
 
 .p-0 {
