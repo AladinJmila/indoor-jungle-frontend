@@ -4,6 +4,12 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import MainCard from './components/MainCard';
 import Navbar from './components/Navbar';
+import Create from './pages/Create';
+import Dashboard from './pages/Dashboard';
+import Login from './pages/Login';
+import Logout from './pages/Logout';
+import Plant from './pages/Plant';
+import Signup from './pages/Signup';
 
 interface IState {
   plants: {
@@ -41,7 +47,12 @@ function App() {
       <div className='App'>
         <Navbar />
         <Routes>
-          <Route path='/' />
+          <Route path='/' element={<Dashboard />} />
+          <Route path='/plants/:id' element={<Plant />} />
+          <Route path='/create' element={<Create />} />
+          <Route path='/signup' element={<Signup />} />
+          <Route path='/login' element={<Login />} />
+          <Route path='/logout' element={<Logout />} />
         </Routes>
       </div>
     </BrowserRouter>
