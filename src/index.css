@@ -3241,6 +3241,7 @@ img {
 
 .btn {
   text-decoration: none;
+  font-size: inherit;
   cursor: pointer;
   display: inline-block;
   border: 0;
@@ -3251,6 +3252,7 @@ img {
 
 .btn-primary {
   text-decoration: none;
+  font-size: inherit;
   cursor: pointer;
   display: inline-block;
   border: 0;
@@ -3264,6 +3266,7 @@ img {
 
 .btn-outlined-primary {
   text-decoration: none;
+  font-size: inherit;
   cursor: pointer;
   display: inline-block;
   border: 0;
@@ -3278,6 +3281,7 @@ img {
 
 .btn-complement-primary {
   text-decoration: none;
+  font-size: inherit;
   cursor: pointer;
   display: inline-block;
   border: 0;
@@ -3293,6 +3297,7 @@ img {
 
 .btn-secondary {
   text-decoration: none;
+  font-size: inherit;
   cursor: pointer;
   display: inline-block;
   border: 0;
@@ -3306,6 +3311,7 @@ img {
 
 .btn-outlined-secondary {
   text-decoration: none;
+  font-size: inherit;
   cursor: pointer;
   display: inline-block;
   border: 0;
@@ -3320,6 +3326,7 @@ img {
 
 .btn-complement-secondary {
   text-decoration: none;
+  font-size: inherit;
   cursor: pointer;
   display: inline-block;
   border: 0;
@@ -3335,6 +3342,7 @@ img {
 
 .btn-info {
   text-decoration: none;
+  font-size: inherit;
   cursor: pointer;
   display: inline-block;
   border: 0;
@@ -3348,6 +3356,7 @@ img {
 
 .btn-outlined-info {
   text-decoration: none;
+  font-size: inherit;
   cursor: pointer;
   display: inline-block;
   border: 0;
@@ -3362,6 +3371,7 @@ img {
 
 .btn-complement-info {
   text-decoration: none;
+  font-size: inherit;
   cursor: pointer;
   display: inline-block;
   border: 0;
@@ -3377,6 +3387,7 @@ img {
 
 .btn-error {
   text-decoration: none;
+  font-size: inherit;
   cursor: pointer;
   display: inline-block;
   border: 0;
@@ -3390,6 +3401,7 @@ img {
 
 .btn-outlined-error {
   text-decoration: none;
+  font-size: inherit;
   cursor: pointer;
   display: inline-block;
   border: 0;
@@ -3404,6 +3416,7 @@ img {
 
 .btn-complement-error {
   text-decoration: none;
+  font-size: inherit;
   cursor: pointer;
   display: inline-block;
   border: 0;
@@ -3419,6 +3432,7 @@ img {
 
 .btn-blue {
   text-decoration: none;
+  font-size: inherit;
   cursor: pointer;
   display: inline-block;
   border: 0;
@@ -3432,6 +3446,7 @@ img {
 
 .btn-outlined-blue {
   text-decoration: none;
+  font-size: inherit;
   cursor: pointer;
   display: inline-block;
   border: 0;
@@ -3446,6 +3461,7 @@ img {
 
 .btn-complement-blue {
   text-decoration: none;
+  font-size: inherit;
   cursor: pointer;
   display: inline-block;
   border: 0;
@@ -3461,6 +3477,7 @@ img {
 
 .btn-red {
   text-decoration: none;
+  font-size: inherit;
   cursor: pointer;
   display: inline-block;
   border: 0;
@@ -3474,6 +3491,7 @@ img {
 
 .btn-outlined-red {
   text-decoration: none;
+  font-size: inherit;
   cursor: pointer;
   display: inline-block;
   border: 0;
@@ -3488,6 +3506,7 @@ img {
 
 .btn-complement-red {
   text-decoration: none;
+  font-size: inherit;
   cursor: pointer;
   display: inline-block;
   border: 0;
@@ -3503,6 +3522,7 @@ img {
 
 .btn-yellow {
   text-decoration: none;
+  font-size: inherit;
   cursor: pointer;
   display: inline-block;
   border: 0;
@@ -3516,6 +3536,7 @@ img {
 
 .btn-outlined-yellow {
   text-decoration: none;
+  font-size: inherit;
   cursor: pointer;
   display: inline-block;
   border: 0;
@@ -3530,6 +3551,7 @@ img {
 
 .btn-complement-yellow {
   text-decoration: none;
+  font-size: inherit;
   cursor: pointer;
   display: inline-block;
   border: 0;
@@ -3545,6 +3567,7 @@ img {
 
 .btn-green {
   text-decoration: none;
+  font-size: inherit;
   cursor: pointer;
   display: inline-block;
   border: 0;
@@ -3558,6 +3581,7 @@ img {
 
 .btn-outlined-green {
   text-decoration: none;
+  font-size: inherit;
   cursor: pointer;
   display: inline-block;
   border: 0;
@@ -3572,6 +3596,7 @@ img {
 
 .btn-complement-green {
   text-decoration: none;
+  font-size: inherit;
   cursor: pointer;
   display: inline-block;
   border: 0;
@@ -3587,6 +3612,7 @@ img {
 
 .btn-pink {
   text-decoration: none;
+  font-size: inherit;
   cursor: pointer;
   display: inline-block;
   border: 0;
@@ -3600,6 +3626,7 @@ img {
 
 .btn-outlined-pink {
   text-decoration: none;
+  font-size: inherit;
   cursor: pointer;
   display: inline-block;
   border: 0;
@@ -3614,6 +3641,7 @@ img {
 
 .btn-complement-pink {
   text-decoration: none;
+  font-size: inherit;
   cursor: pointer;
   display: inline-block;
   border: 0;
@@ -3629,6 +3657,7 @@ img {
 
 .btn-beige {
   text-decoration: none;
+  font-size: inherit;
   cursor: pointer;
   display: inline-block;
   border: 0;
@@ -3642,6 +3671,7 @@ img {
 
 .btn-outlined-beige {
   text-decoration: none;
+  font-size: inherit;
   cursor: pointer;
   display: inline-block;
   border: 0;
@@ -3656,6 +3686,7 @@ img {
 
 .btn-complement-beige {
   text-decoration: none;
+  font-size: inherit;
   cursor: pointer;
   display: inline-block;
   border: 0;
@@ -3671,6 +3702,7 @@ img {
 
 .btn-brown {
   text-decoration: none;
+  font-size: inherit;
   cursor: pointer;
   display: inline-block;
   border: 0;
@@ -3684,6 +3716,7 @@ img {
 
 .btn-outlined-brown {
   text-decoration: none;
+  font-size: inherit;
   cursor: pointer;
   display: inline-block;
   border: 0;
@@ -3698,6 +3731,7 @@ img {
 
 .btn-complement-brown {
   text-decoration: none;
+  font-size: inherit;
   cursor: pointer;
   display: inline-block;
   border: 0;
@@ -3713,6 +3747,7 @@ img {
 
 .btn-white {
   text-decoration: none;
+  font-size: inherit;
   cursor: pointer;
   display: inline-block;
   border: 0;
@@ -3726,6 +3761,7 @@ img {
 
 .btn-outlined-white {
   text-decoration: none;
+  font-size: inherit;
   cursor: pointer;
   display: inline-block;
   border: 0;
@@ -3740,6 +3776,7 @@ img {
 
 .btn-complement-white {
   text-decoration: none;
+  font-size: inherit;
   cursor: pointer;
   display: inline-block;
   border: 0;
@@ -3755,6 +3792,7 @@ img {
 
 .btn-black {
   text-decoration: none;
+  font-size: inherit;
   cursor: pointer;
   display: inline-block;
   border: 0;
@@ -3768,6 +3806,7 @@ img {
 
 .btn-outlined-black {
   text-decoration: none;
+  font-size: inherit;
   cursor: pointer;
   display: inline-block;
   border: 0;
@@ -3782,6 +3821,7 @@ img {
 
 .btn-complement-black {
   text-decoration: none;
+  font-size: inherit;
   cursor: pointer;
   display: inline-block;
   border: 0;
@@ -3815,11 +3855,10 @@ img {
 }
 
 .navbar {
-  display: block;
   width: 100%;
-  height: 30px;
   box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
-  padding: 0.75em;
+  padding: 0.75em 0;
+  box-sizing: border-box;
 }
 .navbar .navbar-brand {
   font-weight: bold;
@@ -3828,13 +3867,9 @@ img {
   align-items: center;
   margin-right: auto;
 }
-.navbar .navbar-brand .navbar-logo-side {
-  margin-right: 10px;
-  width: 36px;
-}
-.navbar .navbar-brand .navbar-logo-wrap {
+.navbar .navbar-brand img {
   position: fixed;
-  max-height: 52px;
+  height: 58px;
   width: 180px;
   top: 0;
   left: 0;
@@ -3843,10 +3878,19 @@ img {
 .navbar .navbar-brand .navbar-text {
   display: block;
   margin: -0.75em;
-  padding: 12px 14px 12px 20px;
+  padding: 10px 14px 12px 32px;
 }
-.navbar .navbar-link {
+.navbar ul {
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: flex-end;
+}
+.navbar ul a {
   margin-right: 20px;
+}
+.navbar ul button {
+  padding: 8px 12px;
 }
 
 .p-0 {

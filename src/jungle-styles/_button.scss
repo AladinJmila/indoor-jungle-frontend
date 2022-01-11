@@ -1,5 +1,6 @@
 @mixin btn($bg-color: #e2e2e2) {
   text-decoration: none;
+  font-size: inherit;
   cursor: pointer;
   display: inline-block;
   border: 0;
