@@ -1,10 +1,18 @@
-// variables & functions
+// variable & functions
+@import 'variables';
+@import 'functions';
 
 // base & layout
 @import 'base';
+@import 'breakpoints';
+@import 'grid';
 
 // colors
+@import 'colors';
+@import 'button';
 
 // components (button, card, navbar)
+@import 'card';
 
-// utilties (maring, padding, opacity)
+// utilities (margin, padding, opacity)
+@import 'utilities';

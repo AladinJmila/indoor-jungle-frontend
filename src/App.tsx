@@ -36,7 +36,7 @@ function App() {
 
   return (
     <div className='App'>
-      {/* <h2>Indoor Jungle</h2> */}
+      <h2>Indoor Jungle</h2>
       {/* <div className='plants'>
         {plants.map(plant => (
           <MainCard key={plant.id} plant={plant} />

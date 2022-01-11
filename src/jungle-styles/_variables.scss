@@ -1,0 +1,38 @@
+// theme colors
+$primary: #4e7261;
+$secondary: #937e81;
+$info: #e0b6bd;
+$error: #983051;
+
+// color palette
+$colors: (
+  'primary': $primary,
+  'secondary': $secondary,
+  'info': $info,
+  'error': $error,
+  'blue': #268291,
+  'red': #c4414c,
+  'yellow': #e8e060,
+  'green': #4e7a29,
+  'pink': #e1707d,
+  'beige': #cea78b,
+  'brown': #644133,
+  'white': #f5f4f5,
+);
+
+// spacing
+$base-spacing: 0.75em;
+$base-margin: 0.75em;
+
+// borders
+$base-border-width: 1px;
+$base-border-radius: 10px;
+
+// box-shadow
+$base-border-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+
+// font sizes
+$base-font-size: 1rem;
+$font-size-sm: $base-font-size * 0.75;
+$font-size-lg: $base-font-size * 1.5;
+$font-size-xl: $base-font-size * 2;
