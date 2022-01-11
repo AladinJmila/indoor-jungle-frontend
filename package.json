@@ -41,5 +41,10 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://drive.google.com/"
+  "proxy": "https://drive.google.com/",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.47.0"
+  }
 }

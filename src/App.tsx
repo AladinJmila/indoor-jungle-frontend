@@ -22,7 +22,6 @@ interface IState {
 }
 
 const apiEndPoint = 'http://localhost:3000/plants';
-// const kljuc = 'e1b5a7b956bfc88ef81d87935b75acec23a504ae';
 
 function App() {
   const [plants, setPlants] = useState<IState['plants']>([]);
@@ -37,12 +36,12 @@ function App() {
 
   return (
     <div className='App'>
-      <h2>Indoor Jungle</h2>
-      <div className='plants'>
+      {/* <h2>Indoor Jungle</h2> */}
+      {/* <div className='plants'>
         {plants.map(plant => (
           <MainCard key={plant.id} plant={plant} />
         ))}
-      </div>
+      </div> */}
     </div>
   );
 }
