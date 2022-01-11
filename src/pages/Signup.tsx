@@ -1,4 +1,8 @@
+import useAuthContext from './../hooks/useAuthContext';
+
 const Signup = () => {
+  const { user } = useAuthContext();
+  console.log(user);
   return (
     <form className='auth-form bg-white'>
       <h2>Sign up</h2>
