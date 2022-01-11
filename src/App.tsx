@@ -11,7 +11,7 @@ import Signup from './pages/Signup';
 
 interface IState {
   plants: {
-    id: number | string;
+    id: string;
     name: string;
     native: string;
     soil: string;
