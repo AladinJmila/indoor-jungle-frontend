@@ -5,6 +5,7 @@
   box-shadow: $base-box-shadow;
   padding: math.div($base-padding, 1.2) 0;
   box-sizing: border-box;
+  position: relative;
 
   .navbar-brand {
     letter-spacing: 1px;
@@ -13,7 +14,7 @@
     margin-right: auto;
 
     img {
-      position: fixed;
+      position: absolute;
       height: 54px;
       width: 180px;
       top: 0;
@@ -40,7 +41,6 @@
     button {
       font: inherit;
       padding: 4px 10px;
-      border-width: $base-border-width * 2;
     }
   }
 }

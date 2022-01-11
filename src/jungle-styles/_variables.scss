@@ -17,7 +17,7 @@ $colors: (
   'pink': #e1707d,
   'beige': #cea78b,
   'brown': #644133,
-  'white': #f5f4f5,
+  'white': white,
   'black': black,
 );
 
@@ -27,7 +27,7 @@ $base-margin: 0.75em;
 
 // borders
 $base-border-width: 1px;
-$base-border-radius: 10px;
+$base-border-radius: 4px;
 $auth-form-border: 1px solid #ddd;
 
 // box-shadow

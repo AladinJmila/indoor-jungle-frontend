@@ -4,7 +4,7 @@
   cursor: pointer;
   display: inline-block;
   border: 0;
-  padding: $base-padding $base-padding * 2;
+  padding: 8px 12px;
   border-radius: $base-border-radius;
   background-color: $bg-color;
   box-sizing: border-box;
@@ -23,7 +23,7 @@
   }
   .btn-outlined-#{$key} {
     @include btn(#fff);
-    border: $base-border-width solid $val;
+    border: $base-border-width * 1.5 solid $val;
     &:hover {
       background-color: $val;
     }
