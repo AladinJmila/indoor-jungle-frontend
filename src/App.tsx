@@ -1,7 +1,9 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import MainCard from './components/MainCard';
+import Navbar from './components/Navbar';
 
 interface IState {
   plants: {
@@ -35,14 +37,14 @@ function App() {
   }, []);
 
   return (
-    <div className='App'>
-      <h2>Indoor Jungle</h2>
-      {/* <div className='plants'>
-        {plants.map(plant => (
-          <MainCard key={plant.id} plant={plant} />
-        ))}
-      </div> */}
-    </div>
+    <BrowserRouter>
+      <div className='App'>
+        <Navbar />
+        <Routes>
+          <Route path='/' />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 

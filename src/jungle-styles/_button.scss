@@ -21,7 +21,7 @@
   }
   .btn-outlined-#{$key} {
     @include btn(#fff);
-    border: $base-border-thickness solid $val;
+    border: $base-border-width solid $val;
     &:hover {
       background-color: $val;
     }
