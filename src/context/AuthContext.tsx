@@ -23,8 +23,8 @@ enum ActionType {
 }
 type Action = { type: ActionType; payload: any | null | boolean };
 
-export const login: Action = { type: ActionType.Login, payload: null };
-export const logout: Action = { type: ActionType.Logout, payload: null };
+export const loginAction: Action = { type: ActionType.Login, payload: null };
+export const logoutAction: Action = { type: ActionType.Logout, payload: null };
 const authIsReady: Action = { type: ActionType.AuthIsReady, payload: false };
 const setDispatch: Action = { type: ActionType.SetDispatch, payload: null };
 
