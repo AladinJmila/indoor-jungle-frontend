@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
 import './App.css';
 import Navbar from './components/Navbar';
 import Create from './pages/Create';
@@ -29,19 +29,34 @@ interface IState {
 }
 
 function App() {
-  const state = useAuthContext();
-  // console.log(state);
+  const { user } = useAuthContext();
+
   return (
     <BrowserRouter>
       <div className='App'>
         <Navbar />
         <Routes>
-          <Route path='/' element={<Dashboard />} />
-          <Route path='/plants/:id' element={<Plant />} />
-          <Route path='/create' element={<Create />} />
-          <Route path='/signup' element={<Signup />} />
-          <Route path='/login' element={<Login />} />
-          <Route path='/logout' element={<Logout />} />
+          <Route
+            path='/'
+            element={user ? <Dashboard /> : <Navigate to='/login' />}
+          />
+          <Route
+            path='/plants/:id'
+            element={user ? <Plant /> : <Navigate to='/login' />}
+          />
+          <Route
+            path='/create'
+            element={user ? <Create /> : <Navigate to='/login' />}
+          />
+          <Route
+            path='/signup'
+            element={!user ? <Signup /> : <Navigate to='/' />}
+          />
+          <Route
+            path='/login'
+            element={!user ? <Login /> : <Navigate to='/' />}
+          />
+          <Route path='*' element={<Dashboard />} />
         </Routes>
       </div>
     </BrowserRouter>

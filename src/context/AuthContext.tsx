@@ -53,7 +53,6 @@ const authReducer = (state: State, action: Action) => {
 export const AuthContextProvider: React.FC = ({ children }) => {
   const [state, dispatch] = useReducer(authReducer, initialState);
   setDispatch.payload = dispatch;
-  console.log('inside', state);
 
   useEffect(() => {
     const unsub = projectAuth.onAuthStateChanged(user => {
