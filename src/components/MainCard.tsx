@@ -1,5 +1,4 @@
 import React, { useRef, useState, useEffect } from 'react';
-import axios from 'axios';
 import './MainCard.css';
 
 interface IProps {
@@ -40,8 +39,6 @@ const MainCard: React.FC<IProps> = ({ plant }) => {
           daysToWater: await daysToWaterCounter(),
         },
       };
-      await axios.put(`${apiEndPoint}/${plant.id}`, body);
-      // const updatedPlant = await axios.get(`${apiEndPoint}/${plant.id}`);
     }
     setShowDetails(!showDetails);
   };
@@ -56,7 +53,6 @@ const MainCard: React.FC<IProps> = ({ plant }) => {
         lastWatered: new Date().toISOString(),
       },
     };
-    await axios.put(`${apiEndPoint}/${plant.id}`, body);
   };
 
   useEffect(() => {
