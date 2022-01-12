@@ -36,7 +36,7 @@ const useLogin = () => {
     }
   };
   useEffect(() => {
-    return setIsCanceled(true);
+    return () => setIsCanceled(true);
   }, []);
 
   return { isPending, error, login };
