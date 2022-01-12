@@ -1,4 +1,3 @@
-import useAuthContext from './../hooks/useAuthContext';
 import useSignup from './../hooks/useSignup';
 import { useState } from 'react';
 
@@ -8,12 +7,10 @@ const Signup = () => {
   const [displayName, setDisplayName] = useState('');
 
   const { signup } = useSignup();
-  const { user } = useAuthContext();
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     await signup(email, password, displayName);
-    console.log(user);
   };
 
   return (

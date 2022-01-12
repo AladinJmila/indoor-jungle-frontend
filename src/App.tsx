@@ -2,13 +2,13 @@ import React, { useEffect, useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Navbar from './components/Navbar';
-import { AuthContextProvider } from './context/AuthContext';
 import Create from './pages/Create';
 import Dashboard from './pages/Dashboard';
 import Login from './pages/Login';
 import Logout from './pages/Logout';
 import Plant from './pages/Plant';
 import Signup from './pages/Signup';
+import useAuthContext from './hooks/useAuthContext';
 
 interface IState {
   plants: {
@@ -29,21 +29,21 @@ interface IState {
 }
 
 function App() {
+  const state = useAuthContext();
+  // console.log(state);
   return (
     <BrowserRouter>
-      <AuthContextProvider>
-        <div className='App'>
-          <Navbar />
-          <Routes>
-            <Route path='/' element={<Dashboard />} />
-            <Route path='/plants/:id' element={<Plant />} />
-            <Route path='/create' element={<Create />} />
-            <Route path='/signup' element={<Signup />} />
-            <Route path='/login' element={<Login />} />
-            <Route path='/logout' element={<Logout />} />
-          </Routes>
-        </div>
-      </AuthContextProvider>
+      <div className='App'>
+        <Navbar />
+        <Routes>
+          <Route path='/' element={<Dashboard />} />
+          <Route path='/plants/:id' element={<Plant />} />
+          <Route path='/create' element={<Create />} />
+          <Route path='/signup' element={<Signup />} />
+          <Route path='/login' element={<Login />} />
+          <Route path='/logout' element={<Logout />} />
+        </Routes>
+      </div>
     </BrowserRouter>
   );
 }
