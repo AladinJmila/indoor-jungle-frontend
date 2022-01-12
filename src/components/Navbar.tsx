@@ -1,7 +1,10 @@
 import { Link } from 'react-router-dom';
 import logo from '../assets/jungle-green.png';
+import useLogout from '../hooks/useLogout';
 
 const Navbar = () => {
+  const { logout } = useLogout();
+
   return (
     <div className='navbar bg-primary'>
       <ul>
@@ -18,7 +21,10 @@ const Navbar = () => {
           <Link to='/signup'>Signup</Link>
         </li>
         <li>
-          <button className='btn-outlined-secondary bg-hover-secondary text-hover-white mr-2 '>
+          <button
+            className='btn-outlined-secondary bg-hover-secondary text-hover-white mr-2'
+            onClick={logout}
+          >
             Logout
           </button>
         </li>
