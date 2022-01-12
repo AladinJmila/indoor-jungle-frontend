@@ -1,12 +1,13 @@
 import useSignup from './../hooks/useSignup';
 import { useState } from 'react';
+import AsyncButton from '../components/AsyncButton';
 
 const Signup = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [displayName, setDisplayName] = useState('');
 
-  const { signup } = useSignup();
+  const { signup, isPending, error } = useSignup();
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -43,9 +44,8 @@ const Signup = () => {
           value={displayName}
         />
       </label>
-      <button className='center-self btn-outlined-secondary bg-hover-secondary text-hover-white '>
-        Sign up
-      </button>
+      <AsyncButton label='Signup' isPending={isPending} />
+      {error && <p className='text-error mt-1'>{error}</p>}
     </form>
   );
 };

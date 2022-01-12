@@ -1,10 +1,11 @@
 import { useState } from 'react';
+import AsyncButton from '../components/AsyncButton';
 import useLogin from './../hooks/useLogin';
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const { login } = useLogin();
+  const { login, isPending, error } = useLogin();
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -32,9 +33,8 @@ const Login = () => {
           value={password}
         />
       </label>
-      <button className='center-self btn-outlined-secondary bg-hover-secondary text-hover-white '>
-        Login
-      </button>
+      <AsyncButton label='Login' isPending={isPending} />
+      {error && <p className='text-error mt-1'>{error}</p>}
     </form>
   );
 };
