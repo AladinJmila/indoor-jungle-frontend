@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom';
 import logo from '../assets/jungle-green.png';
 import useLogout from '../hooks/useLogout';
 import useAuthContext from './../hooks/useAuthContext';
-import AsyncButton from './AsyncButton';
 
 const Navbar = () => {
   const { logout, isPending } = useLogout();
@@ -30,7 +29,22 @@ const Navbar = () => {
         )}
         {user && (
           <li>
-            <AsyncButton label='Logout' isPending={isPending} />
+            {!isPending && (
+              <button
+                className='btn-outlined-secondary bg-hover-secondary text-hover-white mr-2'
+                onClick={logout}
+              >
+                Logout
+              </button>
+            )}
+            {isPending && (
+              <button
+                className='btn-outlined-secondary bg-hover-secondary text-hover-white mr-2'
+                disabled
+              >
+                Loading...
+              </button>
+            )}
           </li>
         )}
       </ul>
