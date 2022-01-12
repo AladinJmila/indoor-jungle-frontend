@@ -34,11 +34,10 @@ const useLogin = () => {
         console.log(error);
       }
     }
-
-    useEffect(() => {
-      return setIsCanceled(true);
-    }, []);
   };
+  useEffect(() => {
+    return setIsCanceled(true);
+  }, []);
 
   return { isPending, error, login };
 };
