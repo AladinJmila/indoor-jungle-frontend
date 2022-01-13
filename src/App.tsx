@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
 import './App.css';
 import Navbar from './components/Navbar';
-import Create from './pages/Create';
+import NewPlant from './pages/Create';
 import Dashboard from './pages/Dashboard';
 import Login from './pages/Login';
 import Plant from './pages/Plant';
@@ -31,7 +31,7 @@ function App() {
               />
               <Route
                 path='/create'
-                element={user ? <Create /> : <Navigate to='/login' />}
+                element={user ? <NewPlant /> : <Navigate to='/login' />}
               />
               <Route
                 path='/utilities'
