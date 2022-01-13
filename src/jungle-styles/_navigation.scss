@@ -48,6 +48,7 @@
   min-height: 100vh;
   box-sizing: border-box;
   position: relative;
+  padding-right: 30px;
 
   .sidebar-content {
     position: fixed;
@@ -59,7 +60,6 @@
     text-align: center;
     letter-spacing: 1px;
     padding: 40px 30px;
-    border-bottom: 1px solid #333;
   }
 
   .links {

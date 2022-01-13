@@ -25,7 +25,7 @@ const Sidebar = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink to='/utilites'>
+            <NavLink to='/utilities'>
               <img src={utilitiesIcon} alt='utilities icon' />
               <span>Utilities</span>
             </NavLink>

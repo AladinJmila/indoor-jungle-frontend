@@ -8,6 +8,7 @@ import Plant from './pages/Plant';
 import Signup from './pages/Signup';
 import useAuthContext from './hooks/useAuthContext';
 import Sidebar from './components/Sidebar';
+import Utilities from './pages/Utilities';
 
 function App() {
   const { user, authIsReady } = useAuthContext();
@@ -31,6 +32,10 @@ function App() {
               <Route
                 path='/create'
                 element={user ? <Create /> : <Navigate to='/login' />}
+              />
+              <Route
+                path='/utilities'
+                element={user ? <Utilities /> : <Navigate to='/login' />}
               />
               <Route
                 path='/signup'
