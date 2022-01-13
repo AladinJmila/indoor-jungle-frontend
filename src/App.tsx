@@ -15,30 +15,32 @@ function App() {
     <BrowserRouter>
       {authIsReady && (
         <div className='App'>
-          <Navbar />
-          <Routes>
-            <Route
-              path='/'
-              element={user ? <Dashboard /> : <Navigate to='/login' />}
-            />
-            <Route
-              path='/plants/:id'
-              element={user ? <Plant /> : <Navigate to='/login' />}
-            />
-            <Route
-              path='/create'
-              element={user ? <Create /> : <Navigate to='/login' />}
-            />
-            <Route
-              path='/signup'
-              element={!user ? <Signup /> : <Navigate to='/' />}
-            />
-            <Route
-              path='/login'
-              element={!user ? <Login /> : <Navigate to='/' />}
-            />
-            <Route path='*' element={<Dashboard />} />
-          </Routes>
+          <div className='container'>
+            <Navbar />
+            <Routes>
+              <Route
+                path='/'
+                element={user ? <Dashboard /> : <Navigate to='/login' />}
+              />
+              <Route
+                path='/plants/:id'
+                element={user ? <Plant /> : <Navigate to='/login' />}
+              />
+              <Route
+                path='/create'
+                element={user ? <Create /> : <Navigate to='/login' />}
+              />
+              <Route
+                path='/signup'
+                element={!user ? <Signup /> : <Navigate to='/' />}
+              />
+              <Route
+                path='/login'
+                element={!user ? <Login /> : <Navigate to='/' />}
+              />
+              <Route path='*' element={<Dashboard />} />
+            </Routes>
+          </div>
         </div>
       )}
     </BrowserRouter>

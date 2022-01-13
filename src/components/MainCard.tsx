@@ -19,8 +19,6 @@ interface IProps {
   };
 }
 
-const apiEndPoint = 'http://localhost:3000/plants';
-
 const MainCard: React.FC<IProps> = ({ plant }) => {
   const [showDetails, setShowDetails] = useState(false);
   const [daysNum, setDaysNum] = useState(plant.watering.interval);

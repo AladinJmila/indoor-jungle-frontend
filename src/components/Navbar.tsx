@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import logo from '../assets/jungle-green.png';
+import logo from '../assets/plant.svg';
 import useLogout from '../hooks/useLogout';
 import useAuthContext from './../hooks/useAuthContext';
 
@@ -8,12 +8,12 @@ const Navbar = () => {
   const { user } = useAuthContext();
 
   return (
-    <div className='navbar bg-primary'>
+    <div className='navbar'>
       <ul>
-        <li className='navbar-brand'>
+        <li className='logo'>
           <Link to='/'>
-            <h4 className='navbar-text text-white'>Indoor Jungle</h4>
-            <img className='bg-black' src={logo} alt='jungle' />
+            <img src={logo} alt='jungle' />
+            <span>Indoor Jungle</span>
           </Link>
         </li>
 
