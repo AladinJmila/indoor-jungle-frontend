@@ -7,6 +7,7 @@ import Login from './pages/Login';
 import Plant from './pages/Plant';
 import Signup from './pages/Signup';
 import useAuthContext from './hooks/useAuthContext';
+import Sidebar from './components/Sidebar';
 
 function App() {
   const { user, authIsReady } = useAuthContext();
@@ -15,6 +16,7 @@ function App() {
     <BrowserRouter>
       {authIsReady && (
         <div className='App'>
+          {user && <Sidebar />}
           <div className='container'>
             <Navbar />
             <Routes>

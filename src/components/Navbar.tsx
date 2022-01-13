@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import logo from '../assets/plant.svg';
+import logo from '../assets/plant_icon.svg';
 import useLogout from '../hooks/useLogout';
 import useAuthContext from './../hooks/useAuthContext';
 

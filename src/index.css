@@ -100,6 +100,41 @@ img {
   padding: 4px 10px;
 }
 
+.sidebar {
+  width: 200px;
+  min-width: 200px;
+  min-height: 100vh;
+  box-sizing: border-box;
+  position: relative;
+}
+.sidebar .sidebar-content {
+  position: fixed;
+  width: inherit;
+}
+.sidebar .user {
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 1px;
+  padding: 40px 30px;
+  border-bottom: 1px solid #333;
+}
+.sidebar .links {
+  margin-top: 80px;
+}
+.sidebar .links li {
+  margin-top: 20px;
+}
+.sidebar .links a {
+  display: flex;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.sidebar .links img {
+  margin-right: 10px;
+  filter: invert(40%);
+}
+
 .auth-form {
   max-width: 360px;
   margin: 60px auto;
