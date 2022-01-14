@@ -147,9 +147,15 @@ img {
   border: 1px solid #ddd;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
 }
+.form .section {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+  margin-top: 34px;
+}
 .form label {
   display: block;
-  margin: 24px auto;
+  margin: 0px auto 24px;
 }
 .form label span {
   display: block;

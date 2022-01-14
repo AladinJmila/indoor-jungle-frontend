@@ -4,9 +4,16 @@
   border: $auth-form-border;
   box-shadow: $base-box-shadow;
 
+  .section {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+    margin-top: 34px;
+  }
+
   label {
     display: block;
-    margin: 24px auto;
+    margin: 0px auto 24px;
 
     span {
       display: block;

@@ -13,8 +13,7 @@ const PlantForm = () => {
   const [light, setLight] = useState('');
   const [waterFrequency, setWaterFrequency] = useState('');
   const [soilDescription, setSoilDescription] = useState('');
-  const [phDescription, setPhDescription] = useState('');
-  const [phValue, setPhValue] = useState('');
+  const [soilPH, setSoilPH] = useState('');
   const [newMix, setNewMix] = useState('');
   const [pottingMix, setPottingMix] = useState<string[]>([]);
   const [careDecription, setCareDescription] = useState('');
@@ -81,9 +80,8 @@ const PlantForm = () => {
         nextWatering: null,
       },
       soil: {
-        soilDrainage: soilDescription,
-        phDescription,
-        phValue,
+        soilDescription,
+        soilPH,
         pottingMix,
       },
       care: {
@@ -113,7 +111,8 @@ const PlantForm = () => {
           <input type='file' required onChange={handleFileChange} />
         </label>
         {photoError && <p className='text-error'>{photoError}</p>}
-        <h3 className='center-self'>info</h3>
+
+        <h3 className='center-self section'>info</h3>
         <label>
           <span>type</span>
           <select name='type' id='' onChange={e => setType(e.target.value)}>
@@ -149,7 +148,7 @@ const PlantForm = () => {
             value={waterFrequency}
           />
         </label>
-        <h3 className='center-self'>soil</h3>
+        <h3 className='center-self section'>soil</h3>
         <label>
           <span>drainage</span>
           <input
@@ -159,19 +158,11 @@ const PlantForm = () => {
           />
         </label>
         <label>
-          <span>PH description</span>
+          <span>PH</span>
           <input
             type='text'
-            onChange={e => setPhDescription(e.target.value)}
-            value={phDescription}
-          />
-        </label>
-        <label>
-          <span>PH value</span>
-          <input
-            type='text'
-            onChange={e => setPhValue(e.target.value)}
-            value={phValue}
+            onChange={e => setSoilPH(e.target.value)}
+            value={soilPH}
           />
         </label>
         <label>
@@ -200,7 +191,7 @@ const PlantForm = () => {
           ))}
         </p>
 
-        <h3 className='center-self'>care</h3>
+        <h3 className='center-self section'>care</h3>
         <label>
           <span>description</span>
           <textarea
