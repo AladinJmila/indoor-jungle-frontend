@@ -1,4 +1,4 @@
-import { useReducer, useState } from 'react';
+import { useReducer, useState, useEffect } from 'react';
 import { porjectFirestore } from '../firebase/config';
 import { timestamp } from './../firebase/config';
 
@@ -118,6 +118,10 @@ const useFirestore = (collection: string) => {
       dispatchIfNotCanceled(errorAction);
     }
   };
+
+  useEffect(() => {
+    return () => setIsCanceled(true);
+  }, []);
 
   return { addDocument, updateDocument, deleteDocument, response };
 };

@@ -1,16 +1,18 @@
 import AsyncButton from '../components/AsyncButton';
 import { useRef, useState } from 'react';
 import { typesList } from './../utilities/formsData';
+import useAuthContext from './../hooks/useAuthContext';
+import { projectStorage } from '../firebase/config';
+import useFirestore from '../hooks/useFirestore';
 
 const PlantForm = () => {
   const [name, setName] = useState('');
   const [photo, setPhoto] = useState(null);
-  const [addedOn, setAddedOn] = useState('');
   const [type, setType] = useState('');
   const [native, setNative] = useState('');
   const [light, setLight] = useState('');
-  const [watering, setWatering] = useState('');
-  const [soilDrainage, setSoilDrainage] = useState('');
+  const [waterFrequency, setWaterFrequency] = useState('');
+  const [soilDescription, setSoilDescription] = useState('');
   const [phDescription, setPhDescription] = useState('');
   const [phValue, setPhValue] = useState('');
   const [newMix, setNewMix] = useState('');
@@ -18,6 +20,9 @@ const PlantForm = () => {
   const [careDecription, setCareDescription] = useState('');
   const [reminder, setReminder] = useState('');
   const [photoError, setPhotoError] = useState<string | null>(null);
+
+  const { user } = useAuthContext();
+  const { addDocument } = useFirestore('plants');
 
   const pottingMixInput = useRef<HTMLInputElement>(null);
 
@@ -32,7 +37,7 @@ const PlantForm = () => {
     pottingMixInput.current?.focus();
   };
 
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleFileChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
     setPhoto(null);
     let selectedPhoto: any;
     if (e.target.files) {
@@ -51,28 +56,43 @@ const PlantForm = () => {
       setPhotoError('Image file size must be less than 500kb');
       return;
     }
+
+    const uploadPath = `plantsPhotos/${user.uid}/${selectedPhoto.name}`;
+    const photo = await projectStorage.ref(uploadPath).put(selectedPhoto);
+    const photoURL = await photo.ref.getDownloadURL();
+
+    setPhotoError(null);
+    setPhoto(photoURL);
   };
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     const newPlant = {
+      createdBy: user.uid,
       name,
       photo,
-      addedOn,
       type,
       native,
       light,
-      watering,
-      soilDrainage,
-      phDescription,
-      phValue,
-      pottingMix,
-      careDecription,
-      reminder,
+      watering: {
+        frequency: waterFrequency,
+        lastWatered: null,
+        nextWatering: null,
+      },
+      soil: {
+        soilDrainage: soilDescription,
+        phDescription,
+        phValue,
+        pottingMix,
+      },
+      care: {
+        careDecription,
+        reminder,
+      },
     };
 
-    console.log(newPlant);
+    addDocument(newPlant);
   };
 
   return (
@@ -92,15 +112,7 @@ const PlantForm = () => {
           <span>photo</span>
           <input type='file' required onChange={handleFileChange} />
         </label>
-        <label>
-          <span>added on</span>
-          <input
-            type='date'
-            required
-            onChange={e => setAddedOn(e.target.value)}
-            value={addedOn}
-          />
-        </label>
+        {photoError && <p className='text-error'>{photoError}</p>}
         <h3 className='center-self'>info</h3>
         <label>
           <span>type</span>
@@ -133,8 +145,8 @@ const PlantForm = () => {
           <span>watering frequency</span>
           <input
             type='number'
-            onChange={e => setWatering(e.target.value)}
-            value={watering}
+            onChange={e => setWaterFrequency(e.target.value)}
+            value={waterFrequency}
           />
         </label>
         <h3 className='center-self'>soil</h3>
@@ -142,8 +154,8 @@ const PlantForm = () => {
           <span>drainage</span>
           <input
             type='text'
-            onChange={e => setSoilDrainage(e.target.value)}
-            value={soilDrainage}
+            onChange={e => setSoilDescription(e.target.value)}
+            value={soilDescription}
           />
         </label>
         <label>
