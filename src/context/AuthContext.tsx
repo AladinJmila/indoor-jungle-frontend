@@ -2,16 +2,15 @@ import { createContext, useReducer, useEffect } from 'react';
 import { projectAuth } from '../firebase/config';
 
 interface AuthContextInterface {
-  user: any | null;
+  user: any;
   authIsReady: boolean;
   authDispatch: React.Dispatch<Action> | any;
 }
 
-// export const AuthContext = createContext<AuthContextInterface | null>(null);
 export const AuthContext = createContext<AuthContextInterface | null>(null);
 
-type State = {
-  user: any | null;
+type IState = {
+  user: any;
   authIsReady: boolean;
   authDispatch: React.Dispatch<Action>;
 };
@@ -21,7 +20,8 @@ enum ActionType {
   AuthIsReady = 'AUTH_IS_READY',
   SetDispatch = 'SET_DISPATCH',
 }
-type Action = { type: ActionType; payload: any | null | boolean };
+
+type Action = { type: ActionType; payload: any };
 
 export const loginAction: Action = { type: ActionType.Login, payload: null };
 export const logoutAction: Action = { type: ActionType.Logout, payload: null };
@@ -34,7 +34,7 @@ const initialState: AuthContextInterface = {
   authDispatch: null,
 };
 
-const authReducer = (state: State, action: Action) => {
+const authReducer = (state: IState, action: Action) => {
   const { type, payload } = action;
   switch (type) {
     case 'SET_DISPATCH':
