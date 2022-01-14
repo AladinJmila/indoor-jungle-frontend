@@ -9,14 +9,14 @@ const AsyncButton: React.FC<IProps> = ({ label, isPending }) => {
   return (
     <>
       {!isPending && (
-        <button className='center-self btn-outlined-secondary bg-hover-secondary text-hover-white '>
+        <button className='center-self btn-outlined-secondary bg-hover-secondary text-hover-white'>
           {label}
         </button>
       )}
       {isPending && (
         <button
           disabled
-          className='center-self btn-outlined-secondary bg-hover-secondary text-hover-white '
+          className='center-self btn-outlined-secondary bg-hover-secondary text-hover-white'
         >
           Loading...
         </button>

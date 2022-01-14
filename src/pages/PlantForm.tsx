@@ -1,5 +1,5 @@
 import AsyncButton from '../components/AsyncButton';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { typesList } from './../utilities/formsData';
 
 const PlantForm = () => {
@@ -13,9 +13,23 @@ const PlantForm = () => {
   const [soilDrainage, setSoilDrainage] = useState('');
   const [phDescription, setPhDescription] = useState('');
   const [phValue, setPhValue] = useState('');
-  const [pottingMix, setPottingMix] = useState('');
+  const [newMix, setNewMix] = useState('');
+  const [pottingMix, setPottingMix] = useState<string[]>([]);
   const [careDecription, setCareDescription] = useState('');
   const [reminder, setReminder] = useState('');
+
+  const pottingMixInput = useRef<HTMLInputElement>(null);
+
+  const handleAdd = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    const mix = newMix.trim();
+
+    if (mix && !pottingMix.includes(mix)) {
+      setPottingMix(prev => [...prev, mix]);
+    }
+    setNewMix('');
+    pottingMixInput.current?.focus();
+  };
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -133,12 +147,30 @@ const PlantForm = () => {
         </label>
         <label>
           <span>potting mix</span>
-          <input
-            type='text'
-            onChange={e => setPottingMix(e.target.value)}
-            value={pottingMix}
-          />
+          <div className='input-with-add'>
+            <input
+              type='text'
+              value={newMix}
+              ref={pottingMixInput}
+              onChange={e => setNewMix(e.target.value)}
+            />
+            <button
+              className='btn-outlined-secondary bg-hover-secondary text-hover-white ml-1'
+              onClick={handleAdd}
+            >
+              Add
+            </button>
+          </div>
         </label>
+        <p>
+          Current mixes:{' '}
+          {pottingMix.map(m => (
+            <em className='text-secondary' key={m}>
+              {m},{' '}
+            </em>
+          ))}
+        </p>
+
         <h3 className='center-self'>care</h3>
         <label>
           <span>description</span>
