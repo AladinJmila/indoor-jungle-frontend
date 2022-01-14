@@ -4,7 +4,7 @@ import { typesList } from './../utilities/formsData';
 
 const PlantForm = () => {
   const [name, setName] = useState('');
-  const [photo, setPhoto] = useState('');
+  const [photo, setPhoto] = useState(null);
   const [addedOn, setAddedOn] = useState('');
   const [type, setType] = useState('');
   const [native, setNative] = useState('');
@@ -17,6 +17,7 @@ const PlantForm = () => {
   const [pottingMix, setPottingMix] = useState<string[]>([]);
   const [careDecription, setCareDescription] = useState('');
   const [reminder, setReminder] = useState('');
+  const [photoError, setPhotoError] = useState<string | null>(null);
 
   const pottingMixInput = useRef<HTMLInputElement>(null);
 
@@ -29,6 +30,27 @@ const PlantForm = () => {
     }
     setNewMix('');
     pottingMixInput.current?.focus();
+  };
+
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setPhoto(null);
+    let selectedPhoto: any;
+    if (e.target.files) {
+      selectedPhoto = e.target.files[0];
+    }
+
+    if (!selectedPhoto) {
+      setPhotoError('Please select a file');
+      return;
+    }
+    if (!selectedPhoto.type.includes('image')) {
+      setPhotoError('Selected file must be an image');
+      return;
+    }
+    if (selectedPhoto.size > 500000) {
+      setPhotoError('Image file size must be less than 500kb');
+      return;
+    }
   };
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -68,12 +90,7 @@ const PlantForm = () => {
         </label>
         <label>
           <span>photo</span>
-          <input
-            type='file'
-            required
-            onChange={e => setPhoto(e.target.value)}
-            value={photo}
-          />
+          <input type='file' required onChange={handleFileChange} />
         </label>
         <label>
           <span>added on</span>
@@ -87,7 +104,7 @@ const PlantForm = () => {
         <h3 className='center-self'>info</h3>
         <label>
           <span>type</span>
-          <select name='type' id=''>
+          <select name='type' id='' onChange={e => setType(e.target.value)}>
             <option value=''></option>
             {typesList.map(t => (
               <option key={t} value={t}>
@@ -166,7 +183,7 @@ const PlantForm = () => {
           Current mixes:{' '}
           {pottingMix.map(m => (
             <em className='text-secondary' key={m}>
-              {m},{' '}
+              {m} |{' '}
             </em>
           ))}
         </p>
@@ -187,7 +204,7 @@ const PlantForm = () => {
             value={reminder}
           />
         </label>
-        <AsyncButton label='Add' isPending={false} />
+        <AsyncButton label='Submit' isPending={false} />
       </form>
     </div>
   );
