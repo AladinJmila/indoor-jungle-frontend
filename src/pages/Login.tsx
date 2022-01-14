@@ -13,7 +13,7 @@ const Login = () => {
   };
 
   return (
-    <form className='auth-form bg-white' onSubmit={handleSubmit}>
+    <form className='form auth-form bg-white' onSubmit={handleSubmit}>
       <h2>Login</h2>
       <label>
         <span>email:</span>

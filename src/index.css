@@ -120,6 +120,7 @@ img {
 }
 .sidebar .links {
   margin-top: 80px;
+  margin-right: 30px;
 }
 .sidebar .links li {
   margin-top: 20px;
@@ -135,61 +136,53 @@ img {
   filter: invert(40%);
 }
 
-.auth-form {
-  max-width: 360px;
+.form {
   margin: 60px auto;
   padding: 40px;
   border: 1px solid #ddd;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
 }
-.auth-form label {
+.form label {
   display: block;
   margin: 24px auto;
 }
-.auth-form label span {
+.form label span {
   display: block;
   margin-bottom: 6px;
 }
-.auth-form label input {
+.form label input {
+  width: 100%;
   padding: 8px 6px;
   font-size: 1rem;
   color: #777;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+.form label textarea {
   width: 100%;
+  padding: 8px 6px;
+  min-height: 60px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+.form label select {
+  width: 100%;
+  padding: 8px 6px;
+  font-size: 1rem;
+  color: #777;
   box-sizing: border-box;
   border: 1px solid #ddd;
   border-radius: 4px;
 }
 
+.auth-form {
+  max-width: 360px;
+}
+
 .plant-form {
   max-width: 640px;
-  margin: 60px auto;
-  padding: 40px;
-  border: 1px solid #ddd;
-  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
-}
-.plant-form label {
-  display: block;
-  margin: 24px auto;
-}
-.plant-form label span {
-  display: block;
-  margin-bottom: 6px;
-}
-.plant-form label input {
-  padding: 8px 6px;
-  font-size: 1rem;
-  color: #777;
-  width: 100%;
-  box-sizing: border-box;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-}
-.plant-form label textarea {
-  width: 100%;
-  min-height: 60px;
-  font-size: 1rem;
-  border: 1px solid #ddd;
-  border-radius: 4px;
 }
 
 .mr-2 {

@@ -1,5 +1,4 @@
-.auth-form {
-  max-width: 360px;
+.form {
   margin: 60px auto;
   padding: 40px;
   border: $auth-form-border;
@@ -14,10 +13,27 @@
       margin-bottom: 6px;
     }
     input {
+      width: 100%;
       padding: 8px 6px;
       font-size: $base-font-size;
       color: #777;
+      box-sizing: border-box;
+      border: $auth-form-border;
+      border-radius: $base-border-radius;
+    }
+    textarea {
       width: 100%;
+      padding: 8px 6px;
+      min-height: 60px;
+      font-size: $base-font-size;
+      border: $auth-form-border;
+      border-radius: $base-border-radius;
+    }
+    select {
+      width: 100%;
+      padding: 8px 6px;
+      font-size: $base-font-size;
+      color: #777;
       box-sizing: border-box;
       border: $auth-form-border;
       border-radius: $base-border-radius;
@@ -25,36 +41,10 @@
   }
 }
 
+.auth-form {
+  max-width: 360px;
+}
+
 .plant-form {
   max-width: 640px;
-  margin: 60px auto;
-  padding: 40px;
-  border: $auth-form-border;
-  box-shadow: $base-box-shadow;
-
-  label {
-    display: block;
-    margin: 24px auto;
-
-    span {
-      display: block;
-      margin-bottom: 6px;
-    }
-    input {
-      padding: 8px 6px;
-      font-size: $base-font-size;
-      color: #777;
-      width: 100%;
-      box-sizing: border-box;
-      border: $auth-form-border;
-      border-radius: $base-border-radius;
-    }
-    textarea {
-      width: 100%;
-      min-height: 60px;
-      font-size: $base-font-size;
-      border: $auth-form-border;
-      border-radius: $base-border-radius;
-    }
-  }
 }

@@ -15,7 +15,7 @@ const Signup = () => {
   };
 
   return (
-    <form className='auth-form bg-white' onSubmit={handleSubmit}>
+    <form className='form auth-form bg-white' onSubmit={handleSubmit}>
       <h2>Sign up</h2>
       <label>
         <span>email:</span>

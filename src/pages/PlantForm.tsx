@@ -1,7 +1,8 @@
 import AsyncButton from '../components/AsyncButton';
 import { useState } from 'react';
+import { typesList } from './../utilities/formsData';
 
-const NewPlant = () => {
+const PlantForm = () => {
   const [name, setName] = useState('');
   const [photo, setPhoto] = useState('');
   const [addedOn, setAddedOn] = useState('');
@@ -39,7 +40,7 @@ const NewPlant = () => {
   };
 
   return (
-    <div className='plant-form bg-white'>
+    <div className='form plant-form bg-white'>
       <h2 className='center-self'>Add Plant</h2>
       <form onSubmit={handleSubmit}>
         <label>
@@ -72,11 +73,14 @@ const NewPlant = () => {
         <h3 className='center-self'>info</h3>
         <label>
           <span>type</span>
-          <input
-            type='text'
-            onChange={e => setType(e.target.value)}
-            value={type}
-          />
+          <select name='type' id=''>
+            <option value=''></option>
+            {typesList.map(t => (
+              <option key={t} value={t}>
+                {t}
+              </option>
+            ))}
+          </select>
         </label>
         <label>
           <span>native</span>
@@ -157,4 +161,4 @@ const NewPlant = () => {
   );
 };
 
-export default NewPlant;
+export default PlantForm;
