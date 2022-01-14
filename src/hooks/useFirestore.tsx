@@ -1,4 +1,6 @@
-import { Statement } from 'typescript';
+import { useReducer, useState } from 'react';
+import { porjectFirestore } from '../firebase/config';
+import { timestamp } from './../firebase/config';
 
 interface IState {
   document: any;
@@ -34,7 +36,7 @@ const firestoreReducer = (state: IState, action: Action) => {
   const { type, payload } = action;
   switch (type) {
     case 'IS_PENDING':
-      return { isPending: true, document: null, error: null, success: null };
+      return { isPending: true, document: null, error: null, success: false };
 
     case 'ADDED_DOCUMENT':
       return {
@@ -68,8 +70,56 @@ const firestoreReducer = (state: IState, action: Action) => {
   }
 };
 
-const useFirestore = () => {
-  return;
+const useFirestore = (collection: string) => {
+  const [response, dispatch] = useReducer(firestoreReducer, initialState);
+  const [isCanceled, setIsCanceled] = useState(false);
+
+  const ref = porjectFirestore.collection(collection);
+
+  const dispatchIfNotCanceled = (action: Action) => {
+    if (!isCanceled) dispatch(action);
+  };
+
+  const addDocument = async (doc: any) => {
+    dispatch(isPendingAction);
+
+    try {
+      const createdAt = timestamp.fromDate(new Date());
+      const addedDocument = await ref.add({ ...doc, createdAt });
+      addedDocAction.payload = addedDocument;
+      dispatchIfNotCanceled(addedDocAction);
+    } catch (error: any) {
+      errorAction.payload = error.message;
+      dispatchIfNotCanceled(errorAction);
+    }
+  };
+
+  const updateDocument = async (id: string, updates: any) => {
+    dispatch(isPendingAction);
+
+    try {
+      const updatedDocument = await ref.doc(id).update(updates);
+      updatedDocAction.payload = updatedDocument;
+      dispatchIfNotCanceled(updatedDocAction);
+    } catch (error: any) {
+      errorAction.payload = error.message;
+      dispatchIfNotCanceled(errorAction);
+    }
+  };
+
+  const deleteDocument = async (id: string) => {
+    dispatch(isPendingAction);
+
+    try {
+      await ref.doc(id).delete();
+      dispatchIfNotCanceled(deletedDocAction);
+    } catch (error: any) {
+      errorAction.payload = error.message;
+      dispatchIfNotCanceled(errorAction);
+    }
+  };
+
+  return { addDocument, updateDocument, deleteDocument, response };
 };
 
 export default useFirestore;
