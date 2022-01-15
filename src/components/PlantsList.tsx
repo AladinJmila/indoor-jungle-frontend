@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import useCollection from './../hooks/useCollection';
+import waterDropIcon from '../assets/water_drop_icon.svg';
 
 const PlantsList = () => {
   const { documents, error } = useCollection('plants');
@@ -14,6 +15,14 @@ const PlantsList = () => {
                 <Link to=''>
                   <div className='card-image'>
                     <img src={doc.photo} alt='plant' />
+                  </div>
+                  <div className='water-drop'>
+                    <div
+                      className={doc.watering.frequency == 0 ? 'dry' : 'wet'}
+                    >
+                      <img src={waterDropIcon} alt='' />
+                      <p>{doc.watering.frequency}</p>
+                    </div>
                   </div>
                   <h2 className='card-title'>{doc.name}</h2>
                 </Link>
