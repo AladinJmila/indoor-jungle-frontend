@@ -3,12 +3,10 @@ const sass = require('gulp-sass')(require('sass'));
 const purgecss = require('gulp-purgecss');
 
 function buildStyles() {
-  return (
-    src('src/styles/**/*.scss')
-      .pipe(sass())
-      // .pipe(purgecss({ content: ['public/index.html', 'src/**/*.tsx'] }))
-      .pipe(dest('src'))
-  );
+  return src('src/styles/**/*.scss')
+    .pipe(sass())
+    .pipe(purgecss({ content: ['public/index.html', 'src/**/*.tsx'] }))
+    .pipe(dest('src'));
 }
 
 function watchTask() {

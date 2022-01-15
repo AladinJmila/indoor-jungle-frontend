@@ -20,3 +20,33 @@
     }
   }
 }
+
+.nav-card {
+  min-width: 250px;
+
+  .card-title {
+    background-color: #fff;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 25px;
+    padding: 10px;
+    box-shadow: $base-box-shadow;
+    font-size: $base-font-size;
+  }
+
+  .card-image {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 50%;
+    // border: 1px #ddd solid;
+    box-shadow: $base-box-shadow;
+
+    img {
+      width: 100%;
+    }
+  }
+}
