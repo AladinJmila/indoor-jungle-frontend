@@ -4,6 +4,7 @@ import { typesList } from './../utilities/formsData';
 import useAuthContext from './../hooks/useAuthContext';
 import { projectStorage } from '../firebase/config';
 import useFirestore from '../hooks/useFirestore';
+import { timestamp } from './../firebase/config';
 
 const PlantForm = () => {
   const [name, setName] = useState('');
@@ -86,7 +87,7 @@ const PlantForm = () => {
       },
       care: {
         careDecription,
-        reminder,
+        reminder: reminder ? timestamp.fromDate(new Date(reminder)) : null,
       },
     };
 
@@ -150,7 +151,7 @@ const PlantForm = () => {
         </label>
         <h3 className='center-self section'>soil</h3>
         <label>
-          <span>drainage</span>
+          <span>description</span>
           <input
             type='text'
             onChange={e => setSoilDescription(e.target.value)}
