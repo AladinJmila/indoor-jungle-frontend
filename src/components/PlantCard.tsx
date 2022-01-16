@@ -19,15 +19,12 @@ const PlantCard: React.FC<IProps> = ({ doc }) => {
   };
 
   const handleWaterReset = () => {
-    const lastWatered = timestamp.fromDate(new Date());
-    let nextWatering: any = lastWatered.toDate();
-    nextWatering.setDate(
-      nextWatering.getDate() + parseInt(doc.watering.frequency)
-    );
+    let nextWatering: any = new Date();
+    nextWatering.setDate(nextWatering.getDate() + doc.watering.frequency);
     nextWatering = timestamp.fromDate(nextWatering);
 
     updateDocument(doc.id, {
-      watering: { ...doc.watering, lastWatered, nextWatering },
+      watering: { ...doc.watering, nextWatering },
     });
   };
 

@@ -79,8 +79,7 @@ const PlantForm = () => {
       light,
       watering: {
         frequency: parseInt(waterFrequency),
-        lastWatered: null,
-        nextWatering: null,
+        nextWatering: timestamp.fromDate(new Date()),
       },
       soil: {
         soilDescription,
