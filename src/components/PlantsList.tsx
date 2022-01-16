@@ -7,7 +7,8 @@ const PlantsList = () => {
   return (
     <div>
       <div className='row gap-1 justify-center'>
-        {documents && documents.map((doc: any) => <PlantCard doc={doc} />)}
+        {documents &&
+          documents.map((doc: any) => <PlantCard key={doc.id} doc={doc} />)}
       </div>
     </div>
   );
