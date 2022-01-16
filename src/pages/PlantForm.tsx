@@ -5,6 +5,7 @@ import useAuthContext from './../hooks/useAuthContext';
 import { projectStorage } from '../firebase/config';
 import useFirestore from '../hooks/useFirestore';
 import { timestamp } from './../firebase/config';
+import { useNavigate } from 'react-router-dom';
 
 const PlantForm = () => {
   const [name, setName] = useState('');
@@ -22,7 +23,8 @@ const PlantForm = () => {
   const [photoError, setPhotoError] = useState<string | null>(null);
 
   const { user } = useAuthContext();
-  const { addDocument } = useFirestore('plants');
+  const { addDocument, response } = useFirestore('plants');
+  const navigate = useNavigate();
 
   const pottingMixInput = useRef<HTMLInputElement>(null);
 
@@ -65,7 +67,7 @@ const PlantForm = () => {
     setPhoto(photoURL);
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     const newPlant = {
@@ -76,7 +78,7 @@ const PlantForm = () => {
       native,
       light,
       watering: {
-        frequency: waterFrequency,
+        frequency: parseInt(waterFrequency),
         lastWatered: null,
         nextWatering: null,
       },
@@ -91,7 +93,8 @@ const PlantForm = () => {
       },
     };
 
-    addDocument(newPlant);
+    await addDocument(newPlant);
+    if (!response.error) navigate('/');
   };
 
   return (

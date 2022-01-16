@@ -7,7 +7,7 @@ const PlantsList = () => {
 
   return (
     <div>
-      <div className='row gap-2 justify-center'>
+      <div className='row gap-1 justify-center'>
         {documents &&
           documents.map((doc: any) => (
             <div className='col-8-sm col-4-lg col-3-xl'>
