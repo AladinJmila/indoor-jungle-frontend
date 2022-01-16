@@ -18,7 +18,7 @@ const PlantForm = () => {
   const [soilPH, setSoilPH] = useState('');
   const [newMix, setNewMix] = useState('');
   const [pottingMix, setPottingMix] = useState<string[]>([]);
-  const [careDecription, setCareDescription] = useState('');
+  const [careDescription, setCareDescription] = useState('');
   const [reminder, setReminder] = useState('');
   const [photoError, setPhotoError] = useState<string | null>(null);
 
@@ -87,7 +87,7 @@ const PlantForm = () => {
         pottingMix,
       },
       care: {
-        careDecription,
+        careDescription,
         reminder: reminder ? timestamp.fromDate(new Date(reminder)) : null,
       },
     };
@@ -199,7 +199,7 @@ const PlantForm = () => {
           <span>description</span>
           <textarea
             onChange={e => setCareDescription(e.target.value)}
-            value={careDecription}
+            value={careDescription}
           />
         </label>
         <label>

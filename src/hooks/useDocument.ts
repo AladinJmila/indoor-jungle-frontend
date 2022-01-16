@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { porjectFirestore } from '../firebase/config';
 
-const useDocument = (collection: string, id: string) => {
+const useDocument = (collection: string, id: string | undefined) => {
   const [document, setDocument] = useState<any>(null);
   const [error, setError] = useState<any>(null);
 

@@ -1,0 +1,22 @@
+.details-main {
+  .date {
+    color: #777;
+  }
+  .details-base {
+    display: flex;
+    // align-items: center;
+
+    img {
+      display: flex;
+      align-items: center;
+      margin-right: 30px;
+      width: 300px;
+      max-height: 400px;
+      border-radius: 25px;
+    }
+
+    p {
+      margin: 10px 0;
+    }
+  }
+}
