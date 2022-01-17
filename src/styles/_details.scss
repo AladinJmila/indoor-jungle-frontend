@@ -1,8 +1,8 @@
-.details-main {
+.plant-details-main {
   .date {
     color: #777;
   }
-  .details-base {
+  .plant-details-base {
     display: flex;
     // align-items: center;
 
@@ -18,5 +18,16 @@
     p {
       margin: 10px 0;
     }
+  }
+
+  input {
+    width: 100px;
+    padding: 8px 6px;
+    text-align: center;
+    font-size: $base-font-size;
+    color: #777;
+    box-sizing: border-box;
+    border: $auth-form-border;
+    border-radius: $base-border-radius;
   }
 }

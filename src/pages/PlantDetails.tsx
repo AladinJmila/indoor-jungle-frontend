@@ -1,17 +1,34 @@
 import { listenerCount } from 'process';
+import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import useDocument from './../hooks/useDocument';
+import useDocument from '../hooks/useDocument';
+import useFirestore from '../hooks/useFirestore';
 
-const Plant = () => {
+const PlantDetails = () => {
   const { id } = useParams();
   const { document, error } = useDocument('plants', id);
+  const { updateDocument } = useFirestore('plants');
+
+  const [frequency, setFrequency] = useState(0);
+
+  const handleUpdateFrequency = () => {
+    updateDocument(document.id, {
+      watering: { ...document.watering, frequency },
+    });
+  };
+
+  useEffect(() => {
+    if (document) {
+      setFrequency(document.watering.frequency);
+    }
+  }, [document]);
 
   if (error) return <p className='error'>{error}</p>;
   if (!document) return <p className='loading'>loading...</p>;
 
   return (
-    <div className='details-main'>
-      <div className='details-base'>
+    <div className='plant-details-main'>
+      <div className='plant-details-base'>
         <img src={document.photo} alt='plant' />
         <div className='info'>
           <h2 className='title'>{document.name}</h2>
@@ -33,6 +50,21 @@ const Plant = () => {
           </div>
         </div>
       </div>
+
+      <h3 className='mt-2'>Watering:</h3>
+      <div className='water-frequency'>
+        <input
+          type='number'
+          onChange={e => setFrequency(parseInt(e.target.value))}
+          value={frequency}
+        />
+        <button
+          className='ml-1 btn-outlined-secondary bg-hover-secondary text-hover-white'
+          onClick={handleUpdateFrequency}
+        >
+          update
+        </button>
+      </div>
       <h3 className='mt-2'>Care:</h3>
       <p>{document.care.careDescription}</p>
       <p className='date'>{document.care.reminder.toDate().toDateString()}</p>
@@ -40,4 +72,4 @@ const Plant = () => {
   );
 };
 
-export default Plant;
+export default PlantDetails;

@@ -4,7 +4,7 @@ import Navbar from './components/Navbar';
 import PlantForm from './pages/PlantForm';
 import Dashboard from './pages/Dashboard';
 import Login from './pages/Login';
-import Plant from './pages/Plant';
+import PlantDetails from './pages/PlantDetails';
 import Signup from './pages/Signup';
 import useAuthContext from './hooks/useAuthContext';
 import Sidebar from './components/Sidebar';
@@ -27,7 +27,7 @@ function App() {
               />
               <Route
                 path='/plants/:id'
-                element={user ? <Plant /> : <Navigate to='/login' />}
+                element={user ? <PlantDetails /> : <Navigate to='/login' />}
               />
               <Route
                 path='/create'
