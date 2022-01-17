@@ -13,7 +13,7 @@ const PlantForm = () => {
   const [type, setType] = useState('');
   const [native, setNative] = useState('');
   const [light, setLight] = useState('');
-  const [waterFrequency, setWaterFrequency] = useState('');
+  const [waterFrequency, setWaterFrequency] = useState(0);
   const [soilDescription, setSoilDescription] = useState('');
   const [soilPH, setSoilPH] = useState('');
   const [newMix, setNewMix] = useState('');
@@ -78,7 +78,7 @@ const PlantForm = () => {
       native,
       light,
       watering: {
-        frequency: parseInt(waterFrequency),
+        frequency: waterFrequency,
         nextWatering: timestamp.fromDate(new Date()),
       },
       soil: {
@@ -147,7 +147,7 @@ const PlantForm = () => {
           <span>watering frequency</span>
           <input
             type='number'
-            onChange={e => setWaterFrequency(e.target.value)}
+            onChange={e => setWaterFrequency(parseInt(e.target.value))}
             value={waterFrequency}
           />
         </label>

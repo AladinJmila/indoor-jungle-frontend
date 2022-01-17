@@ -2,9 +2,10 @@ import { Link } from 'react-router-dom';
 import waterDropIcon from '../assets/water_drop_icon.svg';
 import useFirestore from '../hooks/useFirestore';
 import { timestamp } from './../firebase/config';
+import { PlantSchema } from './../utilities/interfaces';
 
 interface IProps {
-  doc: any;
+  doc: PlantSchema;
 }
 
 const PlantCard: React.FC<IProps> = ({ doc }) => {
