@@ -18,6 +18,8 @@ const PlantCard: React.FC<IProps> = ({ doc }) => {
     return Math.round(nextDate / (1000 * 3600 * 24));
   };
 
+  const daysToWater = getDaysToWater();
+
   const handleWaterReset = () => {
     let nextWatering: any = new Date();
     nextWatering.setDate(nextWatering.getDate() + doc.watering.frequency);
@@ -36,10 +38,14 @@ const PlantCard: React.FC<IProps> = ({ doc }) => {
             <img src={doc.photo} alt='plant' />
           </div>
         </Link>
-        <div className='water-drop' onClick={handleWaterReset}>
-          <div className={getDaysToWater() <= 0 ? 'dry' : 'wet'}>
+        <div
+          className='water-drop'
+          data-testid='water-drop'
+          onClick={handleWaterReset}
+        >
+          <div className={daysToWater <= 0 ? 'dry' : 'wet'}>
             <img src={waterDropIcon} alt='' />
-            <p>{getDaysToWater()}</p>
+            <p data-testid='days-to-water'>{daysToWater}</p>
           </div>
         </div>
         <h2 className='card-title'>{doc.name}</h2>
