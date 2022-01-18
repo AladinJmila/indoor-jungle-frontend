@@ -1,0 +1,40 @@
+.water-drop {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+
+  p {
+    position: absolute;
+    right: 15px;
+    bottom: 10px;
+    font-size: 13px;
+  }
+
+  .wet {
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    background-color: rgb(83, 130, 216);
+    border-radius: 50%;
+    img {
+      filter: invert(100%);
+    }
+  }
+
+  .dry {
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    background-color: rgb(214, 75, 57);
+    border-radius: 50%;
+    img {
+      filter: invert(100%);
+    }
+  }
+
+  img {
+    filter: invert(30%);
+    width: 100%;
+  }
+}

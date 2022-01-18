@@ -1,8 +1,10 @@
 import { listenerCount } from 'process';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import WaterDrop from '../components/WaterDrop';
 import useDocument from '../hooks/useDocument';
 import useFirestore from '../hooks/useFirestore';
+import { PlantSchema } from './../utilities/interfaces';
 
 const PlantDetails = () => {
   const { id } = useParams();
@@ -52,7 +54,9 @@ const PlantDetails = () => {
       </div>
 
       <h3 className='mt-2'>Watering:</h3>
-      <div className='water-frequency'>
+
+      <div className='watering-details'>
+        <WaterDrop watering={document.watering} id={document.id} />
         <input
           type='number'
           onChange={e => setFrequency(parseInt(e.target.value))}
@@ -65,6 +69,7 @@ const PlantDetails = () => {
           update
         </button>
       </div>
+
       <h3 className='mt-2'>Care:</h3>
       <p>{document.care.careDescription}</p>
       <p className='date'>{document.care.reminder.toDate().toDateString()}</p>

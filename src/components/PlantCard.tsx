@@ -16,7 +16,9 @@ const PlantCard: React.FC<IProps> = ({ doc }) => {
             <img src={doc.photo} alt='plant' />
           </div>
         </Link>
-        <WaterDrop watering={doc.watering} id={doc.id} />
+        <div className='icon'>
+          <WaterDrop watering={doc.watering} id={doc.id} />
+        </div>
         <h2 className='card-title'>{doc.name}</h2>
       </div>
     </div>

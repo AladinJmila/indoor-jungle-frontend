@@ -133,44 +133,11 @@ img {
 .nav-card .card-image img {
   width: 100%;
 }
-.nav-card .water-drop {
+.nav-card .icon {
+  width: 40px;
   padding: 2px;
-  position: relative;
   margin-left: auto;
   margin-top: -30px;
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
-}
-.nav-card .water-drop p {
-  position: absolute;
-  right: 15px;
-  bottom: 10px;
-  font-size: 13px;
-}
-.nav-card .water-drop .wet {
-  width: 40px;
-  height: 40px;
-  color: #fff;
-  background-color: #5382d8;
-  border-radius: 50%;
-}
-.nav-card .water-drop .wet img {
-  filter: invert(100%);
-}
-.nav-card .water-drop .dry {
-  width: 40px;
-  height: 40px;
-  color: #fff;
-  background-color: #d64b39;
-  border-radius: 50%;
-}
-.nav-card .water-drop .dry img {
-  filter: invert(100%);
-}
-.nav-card .water-drop img {
-  filter: invert(30%);
-  width: 100%;
 }
 
 .navbar {
@@ -325,7 +292,10 @@ img {
 .plant-details-main .plant-details-base p {
   margin: 10px 0;
 }
-.plant-details-main input {
+.plant-details-main .watering-details {
+  display: flex;
+}
+.plant-details-main .watering-details input {
   width: 100px;
   padding: 8px 6px;
   text-align: center;
@@ -334,6 +304,43 @@ img {
   box-sizing: border-box;
   border: 1px solid #ddd;
   border-radius: 4px;
+}
+
+.water-drop {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+.water-drop p {
+  position: absolute;
+  right: 15px;
+  bottom: 10px;
+  font-size: 13px;
+}
+.water-drop .wet {
+  width: 40px;
+  height: 40px;
+  color: #fff;
+  background-color: #5382d8;
+  border-radius: 50%;
+}
+.water-drop .wet img {
+  filter: invert(100%);
+}
+.water-drop .dry {
+  width: 40px;
+  height: 40px;
+  color: #fff;
+  background-color: #d64b39;
+  border-radius: 50%;
+}
+.water-drop .dry img {
+  filter: invert(100%);
+}
+.water-drop img {
+  filter: invert(30%);
+  width: 100%;
 }
 
 .ml-1 {
