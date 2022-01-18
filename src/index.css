@@ -294,11 +294,11 @@ img {
 }
 .plant-details-main .watering-details {
   display: flex;
+  align-items: center;
 }
-.plant-details-main .watering-details input {
+.plant-details-main input {
   max-width: 80px;
   padding: 8px 6px;
-  margin: 0 12px;
   text-align: center;
   font-size: 1rem;
   color: #777;
@@ -346,6 +346,10 @@ img {
 
 .ml-1 {
   margin-left: 0.75em;
+}
+
+.mr-1 {
+  margin-right: 0.75em;
 }
 
 .mr-2 {

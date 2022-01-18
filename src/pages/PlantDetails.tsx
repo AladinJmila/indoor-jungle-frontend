@@ -5,7 +5,7 @@ import AsyncButtonWithFunc from '../components/AsyncButtonWithFunc';
 import WaterDrop from '../components/WaterDrop';
 import useDocument from '../hooks/useDocument';
 import useFirestore from '../hooks/useFirestore';
-import { PlantSchema } from './../utilities/interfaces';
+import { getDaysDelta } from './../utilities/functions';
 
 const PlantDetails = () => {
   const { id } = useParams();
@@ -18,6 +18,13 @@ const PlantDetails = () => {
     updateDocument(document.id, {
       watering: { ...document.watering, frequency },
     });
+  };
+
+  const getNextWateringDate = () => {
+    const daysToWater = getDaysDelta(document.watering.nextWatering);
+    const nextWatering = new Date();
+    nextWatering.setDate(nextWatering.getDate() + daysToWater);
+    return nextWatering.toDateString();
   };
 
   useEffect(() => {
@@ -56,24 +63,24 @@ const PlantDetails = () => {
 
       <h3 className='mt-2 mb-1'>Watering:</h3>
 
+      <p className='mt-1 mb-1'>Rest frequency:</p>
+      <input
+        type='number'
+        className='mr-2'
+        onChange={e => setFrequency(parseInt(e.target.value))}
+        value={frequency}
+      />
+      <AsyncButtonWithFunc
+        label='update'
+        isPending={response.isPending}
+        handler={handleUpdateFrequency}
+      />
+      <p className='mt-1'>Next Watering: </p>
       <div className='watering-details'>
+        <p className='date mr-1'>{getNextWateringDate()},</p>
+        <p className='mr-1'>in</p>
         <WaterDrop watering={document.watering} id={document.id} />
-        <input
-          type='number'
-          onChange={e => setFrequency(parseInt(e.target.value))}
-          value={frequency}
-        />
-        <AsyncButtonWithFunc
-          label='update'
-          isPending={response.isPending}
-          handler={handleUpdateFrequency}
-        />
-        {/* <button
-          className='btn-outlined-secondary bg-hover-secondary text-hover-white'
-          onClick={handleUpdateFrequency}
-        >
-          update
-        </button> */}
+        <p className='ml-1'>days</p>
       </div>
 
       <h3 className='mt-2 mb-1'>Care:</h3>

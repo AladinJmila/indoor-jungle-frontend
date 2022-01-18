@@ -22,17 +22,17 @@
 
   .watering-details {
     display: flex;
+    align-items: center;
+  }
 
-    input {
-      max-width: 80px;
-      padding: 8px 6px;
-      margin: 0 12px;
-      text-align: center;
-      font-size: $base-font-size;
-      color: #777;
-      box-sizing: border-box;
-      border: $auth-form-border;
-      border-radius: $base-border-radius;
-    }
+  input {
+    max-width: 80px;
+    padding: 8px 6px;
+    text-align: center;
+    font-size: $base-font-size;
+    color: #777;
+    box-sizing: border-box;
+    border: $auth-form-border;
+    border-radius: $base-border-radius;
   }
 }
