@@ -53,7 +53,7 @@ const PlantDetails = () => {
         </div>
       </div>
 
-      <h3 className='mt-2'>Watering:</h3>
+      <h3 className='mt-2 mb-1'>Watering:</h3>
 
       <div className='watering-details'>
         <WaterDrop watering={document.watering} id={document.id} />
@@ -63,14 +63,14 @@ const PlantDetails = () => {
           value={frequency}
         />
         <button
-          className='ml-1 btn-outlined-secondary bg-hover-secondary text-hover-white'
+          className='btn-outlined-secondary bg-hover-secondary text-hover-white'
           onClick={handleUpdateFrequency}
         >
           update
         </button>
       </div>
 
-      <h3 className='mt-2'>Care:</h3>
+      <h3 className='mt-2 mb-1'>Care:</h3>
       <p>{document.care.careDescription}</p>
       <p className='date'>{document.care.reminder.toDate().toDateString()}</p>
     </div>

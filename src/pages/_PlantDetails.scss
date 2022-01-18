@@ -24,8 +24,9 @@
     display: flex;
 
     input {
-      width: 100px;
+      max-width: 80px;
       padding: 8px 6px;
+      margin: 0 12px;
       text-align: center;
       font-size: $base-font-size;
       color: #777;
