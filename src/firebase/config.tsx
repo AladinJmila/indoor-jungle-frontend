@@ -19,3 +19,6 @@ export const projectAuth = firebase.auth();
 export const porjectFirestore = firebase.firestore();
 export const timestamp = firebase.firestore.Timestamp;
 export const projectStorage = firebase.storage();
+
+// firestore types
+export type FSTimestamp = firebase.firestore.Timestamp;

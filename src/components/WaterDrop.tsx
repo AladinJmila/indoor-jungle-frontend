@@ -3,6 +3,7 @@ import { timestamp } from './../firebase/config';
 import waterDropIcon from '../assets/water_drop_icon.svg';
 
 import { PlantSchema } from './../utilities/interfaces';
+import { getDaysDelta } from './../utilities/functions';
 
 interface IProps {
   doc: PlantSchema;
@@ -19,12 +20,13 @@ const WaterDrop: React.FC<IProps> = ({ doc }) => {
     return Math.round(nextDate / (1000 * 3600 * 24));
   };
 
-  const daysToWater = getDaysToWater();
+  // const daysToWater = getDaysToWater();
+  const daysToWater = getDaysDelta(doc.watering.nextWatering);
 
   const handleWaterReset = () => {
-    let nextWatering: any = new Date();
-    nextWatering.setDate(nextWatering.getDate() + doc.watering.frequency);
-    nextWatering = timestamp.fromDate(nextWatering);
+    const nextDate = new Date();
+    nextDate.setDate(nextDate.getDate() + doc.watering.frequency);
+    const nextWatering = timestamp.fromDate(nextDate);
 
     updateDocument(doc.id, {
       watering: { ...doc.watering, nextWatering },

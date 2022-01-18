@@ -19,7 +19,7 @@ const doc = {
 
 let getByTestId;
 
-describe('PlantCard Component', () => {
+describe.skip('PlantCard Component', () => {
   beforeEach(() => {
     const component = render(
       <BrowserRouter>
