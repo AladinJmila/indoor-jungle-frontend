@@ -1,6 +1,7 @@
 import { listenerCount } from 'process';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import AsyncButtonWithFunc from '../components/AsyncButtonWithFunc';
 import WaterDrop from '../components/WaterDrop';
 import useDocument from '../hooks/useDocument';
 import useFirestore from '../hooks/useFirestore';
@@ -9,7 +10,7 @@ import { PlantSchema } from './../utilities/interfaces';
 const PlantDetails = () => {
   const { id } = useParams();
   const { document, error } = useDocument('plants', id);
-  const { updateDocument } = useFirestore('plants');
+  const { updateDocument, response } = useFirestore('plants');
 
   const [frequency, setFrequency] = useState(0);
 
@@ -62,12 +63,17 @@ const PlantDetails = () => {
           onChange={e => setFrequency(parseInt(e.target.value))}
           value={frequency}
         />
-        <button
+        <AsyncButtonWithFunc
+          label='update'
+          isPending={response.isPending}
+          handler={handleUpdateFrequency}
+        />
+        {/* <button
           className='btn-outlined-secondary bg-hover-secondary text-hover-white'
           onClick={handleUpdateFrequency}
         >
           update
-        </button>
+        </button> */}
       </div>
 
       <h3 className='mt-2 mb-1'>Care:</h3>
