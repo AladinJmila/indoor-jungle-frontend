@@ -23,3 +23,8 @@ export interface PlantSchema {
     reminder: firebase.firestore.Timestamp;
   };
 }
+
+export interface Watering {
+  frequency: number;
+  nextWatering: firebase.firestore.Timestamp;
+}
