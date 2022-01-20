@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react';
 import { porjectFirestore } from '../firebase/config';
 
-const useDocument = (collection: string, id: string | undefined) => {
+// let useDocument: (a: string, b: string|null) => T
+
+function useDocument(collection: string, id: string | undefined) {
   const [document, setDocument] = useState<any>(null);
   const [error, setError] = useState<any>(null);
 
@@ -27,6 +29,6 @@ const useDocument = (collection: string, id: string | undefined) => {
   }, [collection, id]);
 
   return { document, error };
-};
+}
 
 export default useDocument;
