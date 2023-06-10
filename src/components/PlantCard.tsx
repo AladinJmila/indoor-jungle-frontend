@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom';
 import { PlantSchema } from './../utilities/interfaces';
 import WaterDrop from './WaterDrop';
 
-interface IProps {
+interface PlantCardProps {
   doc: PlantSchema;
 }
 
-const PlantCard: React.FC<IProps> = ({ doc }) => {
+const PlantCard: React.FC<PlantCardProps> = ({ doc }) => {
   return (
     <div className='col-8-sm col-4-lg col-3-xl'>
       <div className='nav-card'>

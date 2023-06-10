@@ -5,10 +5,12 @@ import WaterDrop from '../components/WaterDrop';
 import useDocument from '../hooks/useDocument';
 import useFirestore from '../hooks/useFirestore';
 import { getDaysDelta } from './../utilities/functions';
+import { PlantSchema } from './../utilities/interfaces';
 
 const PlantDetails = () => {
   const { id } = useParams();
-  const { document, error } = useDocument('plants', id);
+  const { document, error }: { document: PlantSchema; error: any } =
+    useDocument('plants', id);
   const { updateDocument, response } = useFirestore('plants');
 
   const [frequency, setFrequency] = useState(0);
