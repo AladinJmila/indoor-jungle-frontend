@@ -1,40 +1,51 @@
 .water-drop {
-  position: relative;
+  position: absolute;
   width: 40px;
   height: 40px;
+  right: 10px;
   cursor: pointer;
 
-  p {
-    position: absolute;
-    right: 15px;
-    bottom: 10px;
-    font-size: 13px;
-  }
-
   .wet {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     color: #fff;
     background-color: rgb(83, 130, 216);
     border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     img {
       filter: invert(100%);
+    }
+
+    p {
+      position: absolute;
+      font-size: 13px;
     }
   }
 
   .dry {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     color: #fff;
     background-color: rgb(214, 75, 57);
     border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     img {
       filter: invert(100%);
+    }
+
+    p {
+      position: absolute;
+      font-size: 13px;
     }
   }
 
   img {
     filter: invert(30%);
+    opacity: 0.9;
     width: 100%;
   }
 }

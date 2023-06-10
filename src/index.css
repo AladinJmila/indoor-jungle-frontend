@@ -110,11 +110,12 @@ img {
 
 .nav-card {
   min-width: 250px;
+  position: relative;
 }
 .nav-card .card-title {
   background-color: #fff;
   text-align: center;
-  margin-top: 10px;
+  margin-top: 60px;
   border-radius: 25px;
   padding: 10px;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
@@ -177,42 +178,6 @@ img {
 .navbar ul button {
   font: inherit;
   padding: 4px 10px;
-}
-
-.sidebar {
-  width: 200px;
-  min-width: 200px;
-  min-height: 100vh;
-  box-sizing: border-box;
-  position: relative;
-  padding-right: 30px;
-}
-.sidebar .sidebar-content {
-  position: fixed;
-  width: inherit;
-}
-.sidebar .user {
-  font-weight: bold;
-  text-align: center;
-  letter-spacing: 1px;
-  padding: 40px 30px;
-}
-.sidebar .links {
-  margin-top: 80px;
-  margin-right: 30px;
-}
-.sidebar .links li {
-  margin-top: 20px;
-}
-.sidebar .links a {
-  display: flex;
-  padding: 10px;
-  width: 100%;
-  box-sizing: border-box;
-}
-.sidebar .links img {
-  margin-right: 10px;
-  filter: invert(40%);
 }
 
 .form {
@@ -308,40 +273,88 @@ img {
 }
 
 .water-drop {
-  position: relative;
+  position: absolute;
   width: 40px;
   height: 40px;
+  right: 10px;
   cursor: pointer;
 }
-.water-drop p {
-  position: absolute;
-  right: 15px;
-  bottom: 10px;
-  font-size: 13px;
-}
 .water-drop .wet {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   color: #fff;
   background-color: #5382d8;
   border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .water-drop .wet img {
   filter: invert(100%);
 }
+.water-drop .wet p {
+  position: absolute;
+  font-size: 13px;
+}
 .water-drop .dry {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   color: #fff;
   background-color: #d64b39;
   border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .water-drop .dry img {
   filter: invert(100%);
 }
+.water-drop .dry p {
+  position: absolute;
+  font-size: 13px;
+}
 .water-drop img {
   filter: invert(30%);
+  opacity: 0.9;
   width: 100%;
+}
+
+.sidebar {
+  width: 200px;
+  min-width: 200px;
+  min-height: 100vh;
+  box-sizing: border-box;
+  position: relative;
+  padding-right: 30px;
+  background-color: #6f4e37;
+  color: white;
+}
+.sidebar .sidebar-content {
+  position: fixed;
+  width: inherit;
+}
+.sidebar .user {
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 1px;
+  padding: 40px 30px;
+}
+.sidebar .links {
+  margin-top: 80px;
+  margin-right: 30px;
+}
+.sidebar .links li {
+  margin-top: 20px;
+}
+.sidebar .links a {
+  display: flex;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+.sidebar .links img {
+  margin-right: 10px;
+  filter: invert(80%);
 }
 
 .ml-1 {
