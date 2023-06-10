@@ -80,8 +80,10 @@ const PlantDetails = () => {
       <div className='watering-details'>
         <p className='date mr-1'>{getNextWateringDate()},</p>
         <p className='mr-1'>in</p>
-        <WaterDrop watering={document.watering} id={document.id} />
-        <p className='ml-1'>days</p>
+        <p className='days-count m-2'>
+          <WaterDrop watering={document.watering} id={document.id} />
+        </p>
+        <p>days</p>
       </div>
 
       <h3 className='mt-2 mb-1'>Care:</h3>

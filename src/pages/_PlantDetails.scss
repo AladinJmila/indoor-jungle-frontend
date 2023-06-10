@@ -23,6 +23,15 @@
   .watering-details {
     display: flex;
     align-items: center;
+    position: relative;
+    .days-count {
+      position: relative;
+      width: 20px;
+      .water-drop {
+        bottom: -14px;
+        right: 0;
+      }
+    }
   }
 
   input {

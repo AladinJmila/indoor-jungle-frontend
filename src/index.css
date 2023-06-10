@@ -260,6 +260,15 @@ img {
 .plant-details-main .watering-details {
   display: flex;
   align-items: center;
+  position: relative;
+}
+.plant-details-main .watering-details .days-count {
+  position: relative;
+  width: 20px;
+}
+.plant-details-main .watering-details .days-count .water-drop {
+  bottom: -14px;
+  right: 0;
 }
 .plant-details-main input {
   max-width: 80px;
@@ -355,6 +364,10 @@ img {
 .sidebar .links img {
   margin-right: 10px;
   filter: invert(80%);
+}
+
+.m-2 {
+  margin: 1.5em;
 }
 
 .ml-1 {
